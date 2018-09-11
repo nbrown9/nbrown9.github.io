@@ -41,7 +41,8 @@ html, body {
   }  
 
   h1 {
-    padding-bottom: -20px;
     font-family: 'Orbitron', sans-serif;
     font-size: 6em;
+    line-height: 1;
+    margin: 0;
   }
