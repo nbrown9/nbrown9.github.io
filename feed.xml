@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-02-27T22:18:11-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nicholas L Brown</title><subtitle>A blog about data, technology and everything else</subtitle><entry><title type="html">Forecasting Market Reaction Using Twitter</title><link href="http://localhost:4000/forecasting-market-reaction/" rel="alternate" type="text/html" title="Forecasting Market Reaction Using Twitter" /><published>2019-02-27T21:10:00-05:00</published><updated>2019-02-27T21:10:00-05:00</updated><id>http://localhost:4000/forecasting-market-reaction</id><content type="html" xml:base="http://localhost:4000/forecasting-market-reaction/">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
+
+&lt;p&gt;Using Twitter and text mining sentiment classification methods I sought to find a relationship between tweets about a company and its market performance. Multinomial Naive Bayes proved to be effective at sentiment classification however the full capability of the model was limited by the quality of the training data. For the final analysis simple linear regression was conducted on the daily sentiment score and two market indicators, daily return and closing stock price. No trends were readily apparent in the data I sampled however I believe more research could yield interesting and strong results.&lt;/p&gt;
+
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;data-preparation-and-collection&quot;&gt;Data Preparation and Collection&lt;/h2&gt;
+
+&lt;p&gt;There were three main sets of data which were collected to conduct the analysis: bulk tweets annotated for sentiment, tweets about a particular public company, and financial data about that same public company.&lt;/p&gt;
+
+&lt;h4 id=&quot;model-training-data&quot;&gt;Model Training Data&lt;/h4&gt;
+
+&lt;p&gt;Used to train the sentiment prediction model, annotated twitter data was highly difficult to acquire due to the terms of service associated with the twitter API. A dataset of 1.4 million tweets was provided by sentiment140, a project which specializes in analyzing sentiment for brands and products. Because of the implications further on in the analysis it was important to understand the process the creators of the dataset used to annotate the tweets. Rather than human annotation the set was created by detecting the presence of happy or sad emoticons, this caused the dataset to be absent of neutral values with only a 4 (representing positive) or a 0 (representing negative).&lt;/p&gt;
+
+&lt;h4 id=&quot;twitter-financial-data&quot;&gt;Twitter Financial Data&lt;/h4&gt;
+
+&lt;p&gt;Used to conduct the end analysis this data was requested through the twitter premium API. Because of the restrictions imposed on academic access to the API I was limited to collecting the past 30 days of tweets. The methodology for collecting the tweets is as follows: 100 tweets were collected for each day in a 30-day window. Tweets were requested by searching the desired stock ticker, the ‘or’ keyword, and the full company name spelled out. Limitations in this collection method were apparent from the start with twitter search returning several unrelated results depending on the company.&lt;/p&gt;
+
+&lt;h4 id=&quot;quantitative-financial-data&quot;&gt;Quantitative Financial Data&lt;/h4&gt;
+
+&lt;p&gt;Daily financial data was also gathered and reduced to the same 30-day window of the tweets. Using the yahoo finance API financial data included closing price and daily return of the stock was gathered for conducting the final analysis.&lt;/p&gt;
+
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;data-cleaning&quot;&gt;Data Cleaning&lt;/h2&gt;
+
+&lt;p&gt;Because of the limited search features of the twitter API and the nature of tweets themselves, data had to be extensively processed and transformed. After acquiring the tweets from the API, they were processed in two steps.&lt;/p&gt;
+
+&lt;h4 id=&quot;regex-cleanse&quot;&gt;Regex Cleanse.&lt;/h4&gt;
+&lt;p&gt;A simple regex pattern was used to parse the individual tweets removing any non-English letter leaving only the tweets words with no punctuation or emoticons. The exact regex pattern is below:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;‘[^a-zA-Z ]’&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;topic-cleanse&quot;&gt;Topic Cleanse.&lt;/h4&gt;
+&lt;p&gt;After disappointing initial results, I analyzed the tweets given to me by the API, I noticed that twitter search was unreliable and made mistakes which I could not readily explain (returning entire tweets in foreign encoded languages). Because of this I decided to implement a simple lexicon approach whereby tweets were later searched again to ensure they matched at least one of the key words related to the company. Though this approach is still not smart enough to differentiate between homonyms, e.g. Tesla as a vehicle or inventor, it represents a massive improvement in data quality for the final analysis.&lt;/p&gt;
+
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;model-evaluation&quot;&gt;Model Evaluation&lt;/h2&gt;
+&lt;p&gt;At the center of this project was the Naïve Bayes sentiment classification model, tuned to achieve maximum accuracy and speed. Though I originally chose to work with both linear support vector machines and Naïve Bayes the former had to be abandoned primarily because of low performance in preliminary hold-out tests. Additionally, support vector machine required higher processing and time requirements involved in creating the model. Vectorization and tokenization settings were modified to find the most accurate model. The process of vectorizing and evaluating the full model is detailed below:&lt;/p&gt;
+
+&lt;h4 id=&quot;vectorization-settings&quot;&gt;Vectorization Settings&lt;/h4&gt;
+&lt;p&gt;Several vectorization settings were experimented with to produce the most successful model. The final form of the model used the following vectorization settings:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;TFIDF weighting (to emphasize rarer words in the mass of hashtags and slang)&lt;/li&gt;
+  &lt;li&gt;Unigram (bi-gram and tri-gram yielded no noticeable improvement)&lt;/li&gt;
+  &lt;li&gt;Doc_freq = 5 (set minimum document frequency to 5, hopefully hides usernames and other proper nouns we don’t want)&lt;/li&gt;
+  &lt;li&gt;Stopwords = ‘English’ (a list of stop words provided by sklearn retrieved from the Glasgow Information Retrieval Group.2)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;trained-model-evaluation&quot;&gt;Trained Model Evaluation&lt;/h4&gt;
+&lt;p&gt;The completed model was evaluated in a three-step process. First, accuracy scores were predicted using hold-out test (1/3 split) and a 3-fold cross validation scheme. Second, log ratios were calculated for the models most negative and most positive features. Finally, real twitter data about companies was annotated by hand after being fed to the model for sentiment scoring, allowing me to gauge the performance of the model with production data.&lt;/p&gt;
+
+&lt;h4 id=&quot;predicted-accuracy&quot;&gt;Predicted Accuracy&lt;/h4&gt;
+&lt;p&gt;Hold-out tests were conducted using a 33% split of testing and 66% of training data leaving the training dataset with approximately 1 million observations evenly split with ~500,000 negative and ~500,000 positive. Given the binary classification task of assigning a 0 or 4 this model had a baseline accuracy of 50%. The most successful hold-out test predicted model accuracy at 77.29%. Additional cross-validation tests were conducted using the same data and model settings resulting in a 77.38% predicted accuracy. The confusion matrix below shows the prediction results of the holdout test and the precision and recall of the model. Interestingly both precision and recall were similar being differentiated by just 1% in all cases. This leads me to believe that the model is making mistakes recognizing both false positives and true positives.&lt;/p&gt;
+
+&lt;h5 id=&quot;precision-and-recall&quot;&gt;Precision and Recall&lt;/h5&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;P-&amp;gt;&lt;/th&gt;
+      &lt;th&gt;Precision&lt;/th&gt;
+      &lt;th&gt;Recall&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.78&lt;/td&gt;
+      &lt;td&gt;0.77&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;0.77&lt;/td&gt;
+      &lt;td&gt;0.78&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;feature-analysis&quot;&gt;Feature Analysis&lt;/h4&gt;
+&lt;p&gt;Feature Analysis. Log ratios were calculated for the features to determine what the model considered to be the most positive and most negative features. Additionally, the features which ended up in the middle were the most ‘neutral’ features. When calculated most of the top features made sense, e.g. the most negative features included words like “sad” or “miss” and the most positive features included “lol” or “thanks”. Tokens identified as very low in either positive or negative sentiment mostly included names and other proper nouns. The table below shows the calculated log ratios and top features of the model.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Most Negative Features&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Most Positive Features&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.47&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;sad&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.58&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;time&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.42&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;like&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.51&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;going&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.42&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;want&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.49&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;like&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.38&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;today&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.48&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;lol&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.35&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;day&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.20&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;day&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.29&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;miss&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.13&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;thanks&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.16&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;don’t&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.11&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;love&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.10&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;just&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.09&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;just&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.02&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;work&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-4.97&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;im&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-4.64&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;im&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-4.85&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;good&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;real-data-performance&quot;&gt;Real Data Performance&lt;/h4&gt;
+&lt;p&gt;Following the model creation and evaluation it was necessary to see how it actually performed using the financial tweets I gathered.I chose two files at random from the sample of 30 days and analyzed them for anomalies and incorrect predictions. Both sheets scored about 75% correct and ~79% correct for classifying sentiment however it was during this hand analysis in which two issues were uncovered.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Tweets were getting through to the dataset which had little to do with the company (e.g. Tesla had tweets about the inventor rather than the car company)&lt;/li&gt;
+  &lt;li&gt;Certain tweets which were undoubtedly positive or negative (e.g mentioning Nazism or saying “I love x”) were being marked incorrectly.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I attribute these errors to poor quality training data. Because of the way the data was annotated it is possible that people were tweeting things most people would consider negative with positive emojis and sentiment. To fix this sentiment tweets for training should be curated from people who do not possess a dubious moral background. Additionally, the tweets should be annotated by hand as I believe this would increase the ‘common sense’ of the model.&lt;/p&gt;
+
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;final-analysis&quot;&gt;Final Analysis&lt;/h2&gt;
+
+&lt;p&gt;With a working model and the necessary data collected and transformed, the final process for testing my hypothesis was to choose some companies to analyze. I chose three companies: Tesla, Microsoft, and Barrick Gold. First, I used a python program to acquire and feed the model the 100-tweet dataset for each day in a 30-day window of the stock period. Because the model could only predict positive or negative the mean was calculated for each day leaving me with a table containing the date and the mean sentiment score (between 0 and 4) for that date (based on the 100 tweets of the day). While mean was chosen to represent the days sentiment further analysis concluded that analyzing the ratio of positive to negative tweets could also show the overall sentiment of the company or product. Finally, this data was merged with the financial data based on the dates of both files, and regression was conducted to test for a relationship between either closing price and sentiment or daily return and sentiment. To see more of the final analysis you can &lt;a href=&quot;https://github.com/nbrown9/SentimentMarketPrediction/raw/master/presentations/FinalPresentation.pdf&quot;&gt;download my final presentation&lt;/a&gt; or look at the project repo on &lt;a href=&quot;https://github.com/nbrown9/SentimentMarketPrediction&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="text mining" /><category term="multinomial naive bayes" /><category term="sentiment classification" /><category term="linear regression" /><category term="sklearn" /><category term="python" /><summary type="html">Foreword</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/images/blog/twitter-coupons.jpg" /></entry></feed>
