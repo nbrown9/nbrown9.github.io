@@ -1,4 +1,394 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://nicholaslbrown.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nicholaslbrown.com/" rel="alternate" type="text/html" /><updated>2019-02-28T18:22:37-05:00</updated><id>https://nicholaslbrown.com/feed.xml</id><title type="html">Nicholas L Brown</title><subtitle>A blog about data, technology and everything else</subtitle><entry><title type="html">Forecasting Market Reaction Using Twitter</title><link href="https://nicholaslbrown.com/forecasting-market-reaction/" rel="alternate" type="text/html" title="Forecasting Market Reaction Using Twitter" /><published>2019-02-27T21:10:00-05:00</published><updated>2019-02-27T21:10:00-05:00</updated><id>https://nicholaslbrown.com/forecasting-market-reaction</id><content type="html" xml:base="https://nicholaslbrown.com/forecasting-market-reaction/">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://nicholaslbrown.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nicholaslbrown.com/" rel="alternate" type="text/html" /><updated>2019-02-28T19:00:58-05:00</updated><id>https://nicholaslbrown.com/feed.xml</id><title type="html">Nicholas L Brown</title><subtitle>A blog about data, technology and everything else</subtitle><entry><title type="html">Parsing Text Files with Regular Expression</title><link href="https://nicholaslbrown.com/parsing-text-with-regex/" rel="alternate" type="text/html" title="Parsing Text Files with Regular Expression" /><published>2019-02-28T18:47:00-05:00</published><updated>2019-02-28T18:47:00-05:00</updated><id>https://nicholaslbrown.com/parsing-text-with-regex</id><content type="html" xml:base="https://nicholaslbrown.com/parsing-text-with-regex/">&lt;h2 id=&quot;using-regular-expressions-to-analyze-nsf-abstracts-data&quot;&gt;Using Regular Expressions to Analyze NSF Abstracts Data&lt;/h2&gt;
+
+&lt;h3 id=&quot;overview&quot;&gt;Overview:&lt;/h3&gt;
+&lt;p&gt;This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data for this was a folder of text files containing National Science Foundation grant award information.&lt;/p&gt;
+
+&lt;h3 id=&quot;part-1-description&quot;&gt;Part 1: Description&lt;/h3&gt;
+&lt;h4 id=&quot;task-a---datasetcorpus-description&quot;&gt;Task A - Dataset/Corpus Description:&lt;/h4&gt;
+&lt;p&gt;“The National Science Foundation (NSF) is an independent federal agency created by Congress in 1950 “to promote the progress of science; to advance the national health, prosperity, and welfare; to secure the national defense…” NSF is vital because we support basic research and people to create knowledge that transforms the future.” [1] The NSF awards grants to researchers who want to obtain government funding for their projects. 
+The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. Split into 4,016 .txt files each one contains a seperate approved project. Each of the abstracts are organized into sections including the project title, funding amount, sponsor, and a breif description of the project. Each year the NSF awards funding to various scientific projects across the United States. The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. An example of a single file from the corpus is shown below”&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;Title       : CRB: Genetic Diversity of Endangered Populations of Mysticete Whales:
+               Mitochondrial DNA and Historical Demography
+Type        : Award
+NSF Org     : DEB 
+Latest
+Amendment
+Date        : August 1,  1991     
+File        : a9000006
+
+Award Number: 9000006
+Award Instr.: Continuing grant                             
+Prgm Manager: Scott Collins                           
+	      DEB  DIVISION OF ENVIRONMENTAL BIOLOGY       
+	      BIO  DIRECT FOR BIOLOGICAL SCIENCES          
+Start Date  : June 1,  1990       
+Expires     : November 30,  1992   (Estimated)
+Expected
+Total Amt.  : $179720             (Estimated)
+Investigator: Stephen R. Palumbi   (Principal Investigator current)
+Sponsor     : U of Hawaii Manoa
+	      2530 Dole Street
+	      Honolulu, HI  968222225    808/956-7800
+
+NSF Program : 1127      SYSTEMATIC &amp;amp; POPULATION BIOLO
+Fld Applictn: 0000099   Other Applications NEC                  
+              61        Life Science Biological                 
+Program Ref : 9285,
+Abstract    :
+                                                                                             
+              Commercial exploitation over the past two hundred years drove                  
+              the great Mysticete whales to near extinction.  Variation in                   
+              the sizes of populations prior to exploitation, minimal                        
+              population size during exploitation and current population                     
+              sizes permit analyses of the effects of differing levels of                    
+              exploitation on species with different biogeographical                         
+              distributions and life-history characteristics.  Dr. Stephen                   
+              Palumbi at the University of Hawaii will study the genetic                     
+              population structure of three whale species in this context,                   
+              the Humpback Whale, the Gray Whale and the Bowhead Whale.  The                 
+              effect of demographic history will be determined by comparing                  
+              the genetic structure of the three species.  Additional studies                
+              will be carried out on the Humpback Whale.  The humpback has a                 
+              world-wide distribution, but the Atlantic and Pacific                          
+              populations of the northern hemisphere appear to be discrete                   
+              populations, as is the population of the southern hemispheric                  
+              oceans.  Each of these oceanic populations may be further                      
+              subdivided into smaller isolates, each with its own migratory                  
+              pattern and somewhat distinct gene pool.  This study will                      
+              provide information on the level of genetic isolation among                    
+              populations and the levels of gene flow and genealogical                       
+              relationships among populations.  This detailed genetic                        
+              information will facilitate international policy decisions                     
+              regarding the conservation and management of these magnificent                 
+              mammals.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;part-2-pre-processing&quot;&gt;Part 2: Pre-processing&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;h4 id=&quot;task-b---process-text-files&quot;&gt;Task B - Process Text Files&lt;/h4&gt;
+&lt;p&gt;Analysis can be tricky to conduct on multiple text files. For the first part I will clean up the data and organize it in a tabular format. The overall steps for the process are:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Use regular expression to parse text files&lt;/li&gt;
+  &lt;li&gt;Put parsed data in pandas dataframe&lt;/li&gt;
+  &lt;li&gt;Clean dataframe&lt;/li&gt;
+  &lt;li&gt;Create functions and code to analyze the dataframe and do some transformations to the data&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;By the end of the analysis we hope to have a clean and processed dataset which can provide clear insight.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;pandas&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;nltk&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;re&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;os&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# get a list of all the files in the directory&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;all_files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# create a new pandas dataframe to fill&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;new_df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;DataFrame&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;columns&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'file'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'org'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'amt'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'abs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# iterate over the list of files, opening each one and extracting info&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#  - then appending it to the dataframe created above&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;txt_file&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;all_files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data/'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;txt_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;encoding&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'utf-8'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'ignore'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;as&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;read_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# regex text selections&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;nsv_file&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'(?&amp;lt;=File        : ).*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;nsv_org&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'(?&amp;lt;=NSF Org     : ).*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;nsv_amt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'(?&amp;lt;=Total Amt.  : ).*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;nsv_abs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;re&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;findall&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'(?&amp;lt;=Abstract    :)[&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;S]*'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# append data to dataframe&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;new_df&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;new_df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'file'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nsv_file&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'org'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nsv_org&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'amt'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nsv_amt&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'abs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;nsv_abs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ignore_index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# save as csv&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;new_df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;to_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'tabular_dataset.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# View the dataframe shape and some data, make sure all data was loaded&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Rows, Columns : &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new_df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shape&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;new_df&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Rows, Columns :  (4017, 4)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;file&lt;/th&gt;
+      &lt;th&gt;org&lt;/th&gt;
+      &lt;th&gt;amt&lt;/th&gt;
+      &lt;th&gt;abs&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;[a9000875]&lt;/td&gt;
+      &lt;td&gt;[DBI ]&lt;/td&gt;
+      &lt;td&gt;[$42000              (Estimated)]&lt;/td&gt;
+      &lt;td&gt;[\n              This award provides funds to ...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;[a9009851]&lt;/td&gt;
+      &lt;td&gt;[BES ]&lt;/td&gt;
+      &lt;td&gt;[$79497              (Estimated)]&lt;/td&gt;
+      &lt;td&gt;[\n              Pyruvate and phosphoenol-pyru...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;[a9008597]&lt;/td&gt;
+      &lt;td&gt;[DMI ]&lt;/td&gt;
+      &lt;td&gt;[$12000              (Estimated)]&lt;/td&gt;
+      &lt;td&gt;[\n                   Research involves the ex...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;[a9002904]&lt;/td&gt;
+      &lt;td&gt;[DMS ]&lt;/td&gt;
+      &lt;td&gt;[$40286              (Estimated)]&lt;/td&gt;
+      &lt;td&gt;[\n                   Work on this project wil...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;[a9009845]&lt;/td&gt;
+      &lt;td&gt;[SES ]&lt;/td&gt;
+      &lt;td&gt;[$70553              (Estimated)]&lt;/td&gt;
+      &lt;td&gt;[\n                                           ...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;part-3-distribution-of-sentence-lengths&quot;&gt;Part 3: Distribution of Sentence Lengths&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;For the final part of the analysis we want to see how many sentences there are for each file. First we will import and clean the file a little more, then we can write a function which will allow us to exam an the sentences of an individual document.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# read in csv as pandas dataframe, prevents type issues&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'tabular_dataset.csv'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Clean dataset of newlines (\n), (Estimated), and extra whitespace using regex replace&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'\\n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r'\(Estimated\)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;r' +'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;' '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;regex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;span class=&quot;c&quot;&gt;# Check out the first few rows of data&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;file&lt;/th&gt;
+      &lt;th&gt;org&lt;/th&gt;
+      &lt;th&gt;amt&lt;/th&gt;
+      &lt;th&gt;abs&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;['a9000875']&lt;/td&gt;
+      &lt;td&gt;['DBI ']&lt;/td&gt;
+      &lt;td&gt;['$42000 ']&lt;/td&gt;
+      &lt;td&gt;[&quot; This award provides funds to Oklahoma State...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;['a9009851']&lt;/td&gt;
+      &lt;td&gt;['BES ']&lt;/td&gt;
+      &lt;td&gt;['$79497 ']&lt;/td&gt;
+      &lt;td&gt;[' Pyruvate and phosphoenol-pyruvate (PEP) are...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;['a9008597']&lt;/td&gt;
+      &lt;td&gt;['DMI ']&lt;/td&gt;
+      &lt;td&gt;['$12000 ']&lt;/td&gt;
+      &lt;td&gt;[' Research involves the exploration of the us...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;['a9002904']&lt;/td&gt;
+      &lt;td&gt;['DMS ']&lt;/td&gt;
+      &lt;td&gt;['$40286 ']&lt;/td&gt;
+      &lt;td&gt;[' Work on this project will concentrate on pr...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;['a9009845']&lt;/td&gt;
+      &lt;td&gt;['SES ']&lt;/td&gt;
+      &lt;td&gt;['$70553 ']&lt;/td&gt;
+      &lt;td&gt;[&quot; In this project a model of instrumental and...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# split the abstract (abs) column and append it as new column called split&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'split'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'abs'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# take another quick peek at the data after appending the column and splitting abs&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div&gt;
+&lt;style scoped=&quot;&quot;&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+&lt;/style&gt;
+&lt;table border=&quot;1&quot; class=&quot;dataframe&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&quot;text-align: right;&quot;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Unnamed: 0&lt;/th&gt;
+      &lt;th&gt;file&lt;/th&gt;
+      &lt;th&gt;org&lt;/th&gt;
+      &lt;th&gt;amt&lt;/th&gt;
+      &lt;th&gt;abs&lt;/th&gt;
+      &lt;th&gt;split&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;['a9000875']&lt;/td&gt;
+      &lt;td&gt;['DBI ']&lt;/td&gt;
+      &lt;td&gt;['$42000 ']&lt;/td&gt;
+      &lt;td&gt;[&quot; This award provides funds to Oklahoma State...&lt;/td&gt;
+      &lt;td&gt;[[&quot; This award provides funds to Oklahoma Stat...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;['a9009851']&lt;/td&gt;
+      &lt;td&gt;['BES ']&lt;/td&gt;
+      &lt;td&gt;['$79497 ']&lt;/td&gt;
+      &lt;td&gt;[' Pyruvate and phosphoenol-pyruvate (PEP) are...&lt;/td&gt;
+      &lt;td&gt;[[' Pyruvate and phosphoenol-pyruvate (PEP) ar...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;['a9008597']&lt;/td&gt;
+      &lt;td&gt;['DMI ']&lt;/td&gt;
+      &lt;td&gt;['$12000 ']&lt;/td&gt;
+      &lt;td&gt;[' Research involves the exploration of the us...&lt;/td&gt;
+      &lt;td&gt;[[' Research involves the exploration of the u...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;['a9002904']&lt;/td&gt;
+      &lt;td&gt;['DMS ']&lt;/td&gt;
+      &lt;td&gt;['$40286 ']&lt;/td&gt;
+      &lt;td&gt;[' Work on this project will concentrate on pr...&lt;/td&gt;
+      &lt;td&gt;[[' Work on this project will concentrate on p...&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;['a9009845']&lt;/td&gt;
+      &lt;td&gt;['SES ']&lt;/td&gt;
+      &lt;td&gt;['$70553 ']&lt;/td&gt;
+      &lt;td&gt;[&quot; In this project a model of instrumental and...&lt;/td&gt;
+      &lt;td&gt;[[&quot; In this project a model of instrumental an...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;h4 id=&quot;create-final-table&quot;&gt;Create Final Table&lt;/h4&gt;
+&lt;p&gt;Create the final table showing the number of sentences in a given abstract. Change the variable to select a row or you can use the loop to print them all. Showing one for demonstration purposes.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# set row_choice to whatever row you want to analyze the abstract of&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;row_ch&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# iterate through the row choice abstract, print relevant information&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;iterator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'split'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row_ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'file'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row_ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; | &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iterator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; | &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;iterator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Print the final number of sentences&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Number of sentences: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data_set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'split'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row_ch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;['a9009851']  |  0  |  [' Pyruvate and phosphoenol-pyruvate (PEP) are two central intermediates in cellular metabolism 
+
+['a9009851']  |  1  |   They are the branch points of many catabolic and biosynthetic pathways 
+
+['a9009851']  |  2  |   Although the importance of these intermediates has long been recognized, the use of both genetic and engineering techniques for studying the physiological effect of redirected pyruvate and PEP metabolism has not been reported 
+
+['a9009851']  |  3  |   Pyruvate is not normally recycled back to PEP under glycolytic conditions 
+
+['a9009851']  |  4  |   Because of this irreversibility, the yields of many specialty chemicals produced from glucose via bacterial fermentations remain low 
+
+['a9009851']  |  5  |   The Principal Investigator proposes to construct and characterize strains of the bacteria E 
+
+['a9009851']  |  6  |   coli which can recycle pyruvate back to PEP 
+
+['a9009851']  |  7  |   In addition to improving the yields of amino acid fermentations, the results of this project could contribute to the understanding of how the cell distributes its carbon source, and how to decouple product formation from cell growth 
+
+['a9009851']  |  8  |   '] 
+
+Number of sentences:  9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;bibliography&quot;&gt;Bibliography&lt;/h3&gt;
+
+&lt;p style=&quot;font-size: 11pt;&quot;&gt;
+&lt;ul style=&quot;list-style:none;&quot;&gt;
+    &lt;li&gt;[1] https://www.nsf.gov/about/ &lt;/li&gt;
+&lt;/ul&gt;
+&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="regular expression" /><category term="text parsing" /><category term="natural language processing" /><category term="python" /><category term="pandas" /><summary type="html">Using Regular Expressions to Analyze NSF Abstracts Data</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nicholaslbrown.com/assets/images/blog/regex.png" /></entry><entry><title type="html">Forecasting Market Reaction Using Twitter</title><link href="https://nicholaslbrown.com/forecasting-market-reaction/" rel="alternate" type="text/html" title="Forecasting Market Reaction Using Twitter" /><published>2019-02-27T21:10:00-05:00</published><updated>2019-02-27T21:10:00-05:00</updated><id>https://nicholaslbrown.com/forecasting-market-reaction</id><content type="html" xml:base="https://nicholaslbrown.com/forecasting-market-reaction/">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
 
 &lt;p&gt;Using Twitter and text mining sentiment classification methods I sought to find a relationship between tweets about a company and its market performance. Multinomial Naive Bayes proved to be effective at sentiment classification however the full capability of the model was limited by the quality of the training data. For the final analysis simple linear regression was conducted on the daily sentiment score and two market indicators, daily return and closing stock price. No trends were readily apparent in the data I sampled however I believe more research could yield interesting and strong results.&lt;/p&gt;
 

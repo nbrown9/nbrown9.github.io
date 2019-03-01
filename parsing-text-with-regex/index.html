@@ -14,19 +14,24 @@
     <meta property="og:type" content="profile">
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Tags | Nicholas L Brown</title>
+<title>Parsing Text Files with Regular Expression | Nicholas L Brown</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Tags" />
+<meta property="og:title" content="Parsing Text Files with Regular Expression" />
+<meta name="author" content="nicholasbrown" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A blog about data, technology and everything else" />
-<meta property="og:description" content="A blog about data, technology and everything else" />
-<link rel="canonical" href="https://nicholaslbrown.com/tags/" />
-<meta property="og:url" content="https://nicholaslbrown.com/tags/" />
+<meta name="description" content="Small post about parsing text files into pandas dataframes" />
+<meta property="og:description" content="Small post about parsing text files into pandas dataframes" />
+<link rel="canonical" href="https://nicholaslbrown.com/parsing-text-with-regex/" />
+<meta property="og:url" content="https://nicholaslbrown.com/parsing-text-with-regex/" />
 <meta property="og:site_name" content="Nicholas L Brown" />
-<meta name="twitter:card" content="summary" />
+<meta property="og:image" content="https://nicholaslbrown.com/assets/images/blog/regex.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-02-28T18:47:00-05:00" />
+<meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@" />
+<meta name="twitter:creator" content="@nicholasbrown" />
 <script type="application/ld+json">
-{"description":"A blog about data, technology and everything else","@type":"WebPage","url":"https://nicholaslbrown.com/tags/","headline":"Tags","@context":"http://schema.org"}</script>
+{"description":"Small post about parsing text files into pandas dataframes","author":{"@type":"Person","name":"nicholasbrown"},"@type":"BlogPosting","url":"https://nicholaslbrown.com/parsing-text-with-regex/","image":"https://nicholaslbrown.com/assets/images/blog/regex.png","headline":"Parsing Text Files with Regular Expression","dateModified":"2019-02-28T18:47:00-05:00","datePublished":"2019-02-28T18:47:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://nicholaslbrown.com/parsing-text-with-regex/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -52,7 +57,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="https://nicholaslbrown.com/tags/">
+    <link rel="canonical" href="https://nicholaslbrown.com/parsing-text-with-regex/">
     <link rel="alternate" type="application/rss+xml" title="" href="https://nicholaslbrown.com/feed.xml" />
 
     <style>
@@ -1398,83 +1403,11 @@ pre {
 
     <div class="wrapper-normal">
         
-            
-                <div class="page tags">
-            
+            <div class="post">
         
 
             
 
-
-    <header class="header-home animated">
-        
-            <a class="link" href="https://nicholaslbrown.com/about">
-                <img class="selfie" alt="Nicholas L Brown" src="https://nicholaslbrown.com/assets/images/IMG_8639.png" />
-            </a>
-        
-
-        <h1 class="title">Nicholas L Brown</h1>
-        <h2 class="description">Data Scientist, Information Security Hobbyist, and IoT hacker.</h2>
-
-        <div class="social-links">
-    
-
-    
-
-    
-
-    
-
-    
-        <a class="link" data-title="linkedin.com/in/nbrown9" href="http://linkedin.com/in/nbrown9" target="_blank">
-            <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
-        </a>
-    
-
-    
-
-    
-
-    
-        <a class="link" data-title="github.com/nbrown9" href="https://github.com/nbrown9" target="_blank">
-            <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
-        </a>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <a class="link" data-title="youtube.com/channel/UCf7W6LuXJdG53nnQf1y1VhA" href="http://youtube.com/channel/UCf7W6LuXJdG53nnQf1y1VhA" target="_blank">
-            <svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
-        </a>
-    
-
-    
-        <a class="link" data-title="twitter.com/nlbrown9" href="http://twitter.com/nlbrown9" target="_blank">
-            <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
-        </a>
-    
-
-    
-        <a class="link" data-title="nlbrown@syr.edu" href="mailto:nlbrown@syr.edu">
-            <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
-        </a>
-    
-</div>
-
-    </header>
 
 
 <nav class="nav">
@@ -1509,274 +1442,642 @@ pre {
 
 
 
-<section class="list">
-    <h1 class="title">Tags</h1>
 
-    
+    <img class="title-image" src="/assets/images/blog/regex.png" alt="Parsing Text Files with Regular Expression">
 
-    
-        
-            <a class="item" href="#text-mining">text mining</a>
-        
-            <a class="item" href="#multinomial-naive-bayes">multinomial naive bayes</a>
-        
-            <a class="item" href="#sentiment-classification">sentiment classification</a>
-        
-            <a class="item" href="#linear-regression">linear regression</a>
-        
-            <a class="item" href="#sklearn">sklearn</a>
-        
-            <a class="item" href="#python">python</a>
-        
-            <a class="item" href="#regular-expression">regular expression</a>
-        
-            <a class="item" href="#text-parsing">text parsing</a>
-        
-            <a class="item" href="#natural-language-processing">natural language processing</a>
-        
-            <a class="item" href="#pandas">pandas</a>
-        
+
+<h1 class="title">Parsing Text Files with Regular Expression</h1>
+
+<span class="date">
+    <time datetime="28-02-2019">Thursday. February 28, 2019</time>
+     - <span class="reading-time" title="Estimated read time">
     
 
     
+        11 mins
+    
+</span>
+
+</span>
+
+
+    <div class="post-tags">
+        
+            <a class="item" href="https://nicholaslbrown.com/tags/#regular-expression">regular expression</a>
+        
+            <a class="item" href="https://nicholaslbrown.com/tags/#text-parsing">text parsing</a>
+        
+            <a class="item" href="https://nicholaslbrown.com/tags/#natural-language-processing">natural language processing</a>
+        
+            <a class="item" href="https://nicholaslbrown.com/tags/#python">python</a>
+        
+            <a class="item" href="https://nicholaslbrown.com/tags/#pandas">pandas</a>
+        
+    </div>
+
+
+<h2 id="using-regular-expressions-to-analyze-nsf-abstracts-data">Using Regular Expressions to Analyze NSF Abstracts Data</h2>
+
+<h3 id="overview">Overview:</h3>
+<p>This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data for this was a folder of text files containing National Science Foundation grant award information.</p>
+
+<h3 id="part-1-description">Part 1: Description</h3>
+<h4 id="task-a---datasetcorpus-description">Task A - Dataset/Corpus Description:</h4>
+<p>“The National Science Foundation (NSF) is an independent federal agency created by Congress in 1950 “to promote the progress of science; to advance the national health, prosperity, and welfare; to secure the national defense…” NSF is vital because we support basic research and people to create knowledge that transforms the future.” [1] The NSF awards grants to researchers who want to obtain government funding for their projects. 
+The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. Split into 4,016 .txt files each one contains a seperate approved project. Each of the abstracts are organized into sections including the project title, funding amount, sponsor, and a breif description of the project. Each year the NSF awards funding to various scientific projects across the United States. The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. An example of a single file from the corpus is shown below”</p>
+
+<figure class="highlight"><pre><code class="language-raw" data-lang="raw">Title       : CRB: Genetic Diversity of Endangered Populations of Mysticete Whales:
+               Mitochondrial DNA and Historical Demography
+Type        : Award
+NSF Org     : DEB 
+Latest
+Amendment
+Date        : August 1,  1991     
+File        : a9000006
+
+Award Number: 9000006
+Award Instr.: Continuing grant                             
+Prgm Manager: Scott Collins                           
+	      DEB  DIVISION OF ENVIRONMENTAL BIOLOGY       
+	      BIO  DIRECT FOR BIOLOGICAL SCIENCES          
+Start Date  : June 1,  1990       
+Expires     : November 30,  1992   (Estimated)
+Expected
+Total Amt.  : $179720             (Estimated)
+Investigator: Stephen R. Palumbi   (Principal Investigator current)
+Sponsor     : U of Hawaii Manoa
+	      2530 Dole Street
+	      Honolulu, HI  968222225    808/956-7800
+
+NSF Program : 1127      SYSTEMATIC &amp; POPULATION BIOLO
+Fld Applictn: 0000099   Other Applications NEC                  
+              61        Life Science Biological                 
+Program Ref : 9285,
+Abstract    :
+                                                                                             
+              Commercial exploitation over the past two hundred years drove                  
+              the great Mysticete whales to near extinction.  Variation in                   
+              the sizes of populations prior to exploitation, minimal                        
+              population size during exploitation and current population                     
+              sizes permit analyses of the effects of differing levels of                    
+              exploitation on species with different biogeographical                         
+              distributions and life-history characteristics.  Dr. Stephen                   
+              Palumbi at the University of Hawaii will study the genetic                     
+              population structure of three whale species in this context,                   
+              the Humpback Whale, the Gray Whale and the Bowhead Whale.  The                 
+              effect of demographic history will be determined by comparing                  
+              the genetic structure of the three species.  Additional studies                
+              will be carried out on the Humpback Whale.  The humpback has a                 
+              world-wide distribution, but the Atlantic and Pacific                          
+              populations of the northern hemisphere appear to be discrete                   
+              populations, as is the population of the southern hemispheric                  
+              oceans.  Each of these oceanic populations may be further                      
+              subdivided into smaller isolates, each with its own migratory                  
+              pattern and somewhat distinct gene pool.  This study will                      
+              provide information on the level of genetic isolation among                    
+              populations and the levels of gene flow and genealogical                       
+              relationships among populations.  This detailed genetic                        
+              information will facilitate international policy decisions                     
+              regarding the conservation and management of these magnificent                 
+              mammals.</code></pre></figure>
+
+<h3 id="part-2-pre-processing">Part 2: Pre-processing</h3>
+<hr />
+<h4 id="task-b---process-text-files">Task B - Process Text Files</h4>
+<p>Analysis can be tricky to conduct on multiple text files. For the first part I will clean up the data and organize it in a tabular format. The overall steps for the process are:</p>
+<ol>
+  <li>Use regular expression to parse text files</li>
+  <li>Put parsed data in pandas dataframe</li>
+  <li>Clean dataframe</li>
+  <li>Create functions and code to analyze the dataframe and do some transformations to the data</li>
+</ol>
+
+<p>By the end of the analysis we hope to have a clean and processed dataset which can provide clear insight.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># get a list of all the files in the directory</span>
+<span class="n">all_files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">"data/"</span><span class="p">)</span>
+
+<span class="c"># create a new pandas dataframe to fill</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s">'file'</span><span class="p">,</span><span class="s">'org'</span><span class="p">,</span><span class="s">'amt'</span><span class="p">,</span><span class="s">'abs'</span><span class="p">])</span>
+
+<span class="c"># iterate over the list of files, opening each one and extracting info</span>
+<span class="c">#  - then appending it to the dataframe created above</span>
+<span class="k">for</span> <span class="n">txt_file</span> <span class="ow">in</span> <span class="n">all_files</span><span class="p">:</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">'data/'</span><span class="o">+</span><span class="n">txt_file</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s">'utf-8'</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s">'ignore'</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">read_data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    <span class="c"># regex text selections</span>
+    <span class="n">nsv_file</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'(?&lt;=File        : ).*'</span><span class="p">,</span><span class="n">read_data</span><span class="p">)</span>
+    <span class="n">nsv_org</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'(?&lt;=NSF Org     : ).*'</span><span class="p">,</span><span class="n">read_data</span><span class="p">)</span>
+    <span class="n">nsv_amt</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'(?&lt;=Total Amt.  : ).*'</span><span class="p">,</span><span class="n">read_data</span><span class="p">)</span>
+    <span class="n">nsv_abs</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">'(?&lt;=Abstract    :)[</span><span class="err">\</span><span class="s">s</span><span class="err">\</span><span class="s">S]*'</span><span class="p">,</span><span class="n">read_data</span><span class="p">)</span>
+    <span class="c"># append data to dataframe</span>
+    <span class="n">new_df</span> <span class="o">=</span> <span class="n">new_df</span><span class="o">.</span><span class="n">append</span><span class="p">({</span><span class="s">'file'</span> <span class="p">:</span> <span class="n">nsv_file</span><span class="p">,</span> <span class="s">'org'</span> <span class="p">:</span> <span class="n">nsv_org</span><span class="p">,</span> <span class="s">'amt'</span> <span class="p">:</span> <span class="n">nsv_amt</span><span class="p">,</span> <span class="s">'abs'</span><span class="p">:</span><span class="n">nsv_abs</span><span class="p">},</span><span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># save as csv</span>
+<span class="n">new_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s">'tabular_dataset.csv'</span><span class="p">)</span>
+
+<span class="c"># View the dataframe shape and some data, make sure all data was loaded</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Rows, Columns : "</span><span class="p">,</span><span class="n">new_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="n">new_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Rows, Columns :  (4017, 4)
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>file</th>
+      <th>org</th>
+      <th>amt</th>
+      <th>abs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[a9000875]</td>
+      <td>[DBI ]</td>
+      <td>[$42000              (Estimated)]</td>
+      <td>[\n              This award provides funds to ...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>[a9009851]</td>
+      <td>[BES ]</td>
+      <td>[$79497              (Estimated)]</td>
+      <td>[\n              Pyruvate and phosphoenol-pyru...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>[a9008597]</td>
+      <td>[DMI ]</td>
+      <td>[$12000              (Estimated)]</td>
+      <td>[\n                   Research involves the ex...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>[a9002904]</td>
+      <td>[DMS ]</td>
+      <td>[$40286              (Estimated)]</td>
+      <td>[\n                   Work on this project wil...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>[a9009845]</td>
+      <td>[SES ]</td>
+      <td>[$70553              (Estimated)]</td>
+      <td>[\n                                           ...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h3 id="part-3-distribution-of-sentence-lengths">Part 3: Distribution of Sentence Lengths</h3>
+<hr />
+<p>For the final part of the analysis we want to see how many sentences there are for each file. First we will import and clean the file a little more, then we can write a function which will allow us to exam an the sentences of an individual document.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># read in csv as pandas dataframe, prevents type issues</span>
+<span class="n">data_set</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'tabular_dataset.csv'</span><span class="p">)</span>
+
+<span class="c"># Clean dataset of newlines (\n), (Estimated), and extra whitespace using regex replace</span>
+<span class="n">data_set</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">r'\\n'</span><span class="p">,</span><span class="s">' '</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> 
+<span class="n">data_set</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">r'\(Estimated\)'</span><span class="p">,</span><span class="s">' '</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">data_set</span> <span class="o">=</span> <span class="n">data_set</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">r' +'</span><span class="p">,</span><span class="s">' '</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> 
+<span class="c"># Check out the first few rows of data</span>
+<span class="n">data_set</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>file</th>
+      <th>org</th>
+      <th>amt</th>
+      <th>abs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>['a9000875']</td>
+      <td>['DBI ']</td>
+      <td>['$42000 ']</td>
+      <td>[" This award provides funds to Oklahoma State...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>['a9009851']</td>
+      <td>['BES ']</td>
+      <td>['$79497 ']</td>
+      <td>[' Pyruvate and phosphoenol-pyruvate (PEP) are...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>['a9008597']</td>
+      <td>['DMI ']</td>
+      <td>['$12000 ']</td>
+      <td>[' Research involves the exploration of the us...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>['a9002904']</td>
+      <td>['DMS ']</td>
+      <td>['$40286 ']</td>
+      <td>[' Work on this project will concentrate on pr...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>['a9009845']</td>
+      <td>['SES ']</td>
+      <td>['$70553 ']</td>
+      <td>[" In this project a model of instrumental and...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># split the abstract (abs) column and append it as new column called split</span>
+<span class="n">data_set</span><span class="p">[</span><span class="s">'split'</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_set</span><span class="p">[</span><span class="s">'abs'</span><span class="p">]</span><span class="o">.</span><span class="nb">str</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># take another quick peek at the data after appending the column and splitting abs</span>
+<span class="n">data_set</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div></div>
+
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>file</th>
+      <th>org</th>
+      <th>amt</th>
+      <th>abs</th>
+      <th>split</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>['a9000875']</td>
+      <td>['DBI ']</td>
+      <td>['$42000 ']</td>
+      <td>[" This award provides funds to Oklahoma State...</td>
+      <td>[[" This award provides funds to Oklahoma Stat...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>['a9009851']</td>
+      <td>['BES ']</td>
+      <td>['$79497 ']</td>
+      <td>[' Pyruvate and phosphoenol-pyruvate (PEP) are...</td>
+      <td>[[' Pyruvate and phosphoenol-pyruvate (PEP) ar...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>['a9008597']</td>
+      <td>['DMI ']</td>
+      <td>['$12000 ']</td>
+      <td>[' Research involves the exploration of the us...</td>
+      <td>[[' Research involves the exploration of the u...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>['a9002904']</td>
+      <td>['DMS ']</td>
+      <td>['$40286 ']</td>
+      <td>[' Work on this project will concentrate on pr...</td>
+      <td>[[' Work on this project will concentrate on p...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>['a9009845']</td>
+      <td>['SES ']</td>
+      <td>['$70553 ']</td>
+      <td>[" In this project a model of instrumental and...</td>
+      <td>[[" In this project a model of instrumental an...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h4 id="create-final-table">Create Final Table</h4>
+<p>Create the final table showing the number of sentences in a given abstract. Change the variable to select a row or you can use the loop to print them all. Showing one for demonstration purposes.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># set row_choice to whatever row you want to analyze the abstract of</span>
+<span class="n">row_ch</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c"># iterate through the row choice abstract, print relevant information</span>
+<span class="n">iterator</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">data_set</span><span class="p">[</span><span class="s">'split'</span><span class="p">][</span><span class="n">row_ch</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">data_set</span><span class="p">[</span><span class="s">'file'</span><span class="p">][</span><span class="n">row_ch</span><span class="p">],</span><span class="s">" | "</span><span class="p">,</span> <span class="n">iterator</span><span class="p">,</span> <span class="s">" | "</span><span class="p">,</span> <span class="n">line</span><span class="p">,</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">iterator</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="c"># Print the final number of sentences</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Number of sentences: "</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_set</span><span class="p">[</span><span class="s">'split'</span><span class="p">][</span><span class="n">row_ch</span><span class="p">]))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>['a9009851']  |  0  |  [' Pyruvate and phosphoenol-pyruvate (PEP) are two central intermediates in cellular metabolism 
+
+['a9009851']  |  1  |   They are the branch points of many catabolic and biosynthetic pathways 
+
+['a9009851']  |  2  |   Although the importance of these intermediates has long been recognized, the use of both genetic and engineering techniques for studying the physiological effect of redirected pyruvate and PEP metabolism has not been reported 
+
+['a9009851']  |  3  |   Pyruvate is not normally recycled back to PEP under glycolytic conditions 
+
+['a9009851']  |  4  |   Because of this irreversibility, the yields of many specialty chemicals produced from glucose via bacterial fermentations remain low 
+
+['a9009851']  |  5  |   The Principal Investigator proposes to construct and characterize strains of the bacteria E 
+
+['a9009851']  |  6  |   coli which can recycle pyruvate back to PEP 
+
+['a9009851']  |  7  |   In addition to improving the yields of amino acid fermentations, the results of this project could contribute to the understanding of how the cell distributes its carbon source, and how to decouple product formation from cell growth 
+
+['a9009851']  |  8  |   '] 
+
+Number of sentences:  9
+</code></pre></div></div>
+
+<h3 id="bibliography">Bibliography</h3>
+
+<p style="font-size: 11pt;">
+<ul style="list-style:none;">
+    <li>[1] https://www.nsf.gov/about/ </li>
+</ul>
+</p>
+
+
+
+    <div class="blog-navigation">
+        
+            <a class="prev"></a>
+        
+        
+    </div>
+
+
+
+    <div class="related">
+    
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+    
+        
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+        
+            
+                
+            
+                
+            
+                
+            
+                
+                    
+                    <h4>Related Posts</h4>
+                    <ul>
+                    
+                    <li class="relatedPost">
+                        <a href="https://nicholaslbrown.com/forecasting-market-reaction/">Forecasting Market Reaction Using Twitter
+                        
+                        </a>
+                    </li>
+                    
+                    
+                
+            
+                
+            
+        
+    
+    
+        </ul>
+    
+</div>
+
+
+
+
+    <section class="author">
+    <div class="toleft">
+        <img class="selfie" src="https://nicholaslbrown.com/assets/images/IMG_5261.png" alt="Nicholas Brown">
+    </div>
+
+    <div class="toright">
+        <h4 class="name">Nicholas Brown</h4>
+        <p class="bio">Data Scientist, Information Security Hobbyist, and IoT hacker.</p>
+
+        <div class="share">
+            <!-- Note: Only use three share links if your site width is set to large -->
+            <!-- If site width is set to normal, you may choose any two share links -->
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=https://nicholaslbrown.com/parsing-text-with-regex/ - Parsing Text Files with Regular Expression by @nlbrown9">
+                <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg><span class="icon-twitter">Tweet</span>
+            </a>
+
+            <a class="facebook" href="javascript:void(0)" onclick="window.open('https://facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href), 'facebook-share-dialog', 'width=626,height=436'); return false;">
+                <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg><span class="icon-facebook-rect">Share</span>
+            </a>
+
+            <!-- <a class="google-plus" href="https://plus.google.com/share?url=https://nicholaslbrown.com/parsing-text-with-regex/" target="_blank">
+                <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg><span class="icon-google-plus">Share</span>
+            </a> -->
+
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://nicholaslbrown.com/parsing-text-with-regex/&amp;title=Parsing Text Files with Regular Expression&amp;summary=Small post about parsing text files into pandas dataframes&amp;source=https://nicholaslbrown.com" target="_blank">
+                <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
+            </a> -->
+
+            <!-- <a class="reddit" href="https://reddit.com/submit?url=https://nicholaslbrown.com/parsing-text-with-regex/&amp;title=Parsing Text Files with Regular Expression" target="_blank">
+                <svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg><span class="icon-reddit">Share</span>
+            </a> -->
+        </div>
+    </div>
 </section>
 
-<hr>
 
-<section class="tag-list">
-    
-    <h2 class="title" id="text-mining">#text mining</h2>
 
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/forecasting-market-reaction/">
-                            <aside class="date"><time datetime="27-02-2019">Feb 27 2019</time></aside>
-                            <h3 class="title">Forecasting Market Reaction Using Twitter</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
 
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="multinomial-naive-bayes">#multinomial naive bayes</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/forecasting-market-reaction/">
-                            <aside class="date"><time datetime="27-02-2019">Feb 27 2019</time></aside>
-                            <h3 class="title">Forecasting Market Reaction Using Twitter</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="sentiment-classification">#sentiment classification</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/forecasting-market-reaction/">
-                            <aside class="date"><time datetime="27-02-2019">Feb 27 2019</time></aside>
-                            <h3 class="title">Forecasting Market Reaction Using Twitter</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="linear-regression">#linear regression</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/forecasting-market-reaction/">
-                            <aside class="date"><time datetime="27-02-2019">Feb 27 2019</time></aside>
-                            <h3 class="title">Forecasting Market Reaction Using Twitter</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="sklearn">#sklearn</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/forecasting-market-reaction/">
-                            <aside class="date"><time datetime="27-02-2019">Feb 27 2019</time></aside>
-                            <h3 class="title">Forecasting Market Reaction Using Twitter</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="python">#python</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/forecasting-market-reaction/">
-                            <aside class="date"><time datetime="27-02-2019">Feb 27 2019</time></aside>
-                            <h3 class="title">Forecasting Market Reaction Using Twitter</h3>
-                        </a>
-                    </li>
-                
-            
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/parsing-text-with-regex/">
-                            <aside class="date"><time datetime="28-02-2019">Feb 28 2019</time></aside>
-                            <h3 class="title">Parsing Text Files with Regular Expression</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="regular-expression">#regular expression</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/parsing-text-with-regex/">
-                            <aside class="date"><time datetime="28-02-2019">Feb 28 2019</time></aside>
-                            <h3 class="title">Parsing Text Files with Regular Expression</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="text-parsing">#text parsing</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/parsing-text-with-regex/">
-                            <aside class="date"><time datetime="28-02-2019">Feb 28 2019</time></aside>
-                            <h3 class="title">Parsing Text Files with Regular Expression</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="natural-language-processing">#natural language processing</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/parsing-text-with-regex/">
-                            <aside class="date"><time datetime="28-02-2019">Feb 28 2019</time></aside>
-                            <h3 class="title">Parsing Text Files with Regular Expression</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-    <h2 class="title" id="pandas">#pandas</h2>
-
-    <ul class="list">
-        
-        
-            
-                
-                    <li class="item">
-                        <a class="url" href="https://nicholaslbrown.com/parsing-text-with-regex/">
-                            <aside class="date"><time datetime="28-02-2019">Feb 28 2019</time></aside>
-                            <h3 class="title">Parsing Text Files with Regular Expression</h3>
-                        </a>
-                    </li>
-                
-            
-        
-        
-        
-    </ul>
-
-    <div class="breaker"></div>
-    
-</section>
 
 
 <footer class="footer-main">
