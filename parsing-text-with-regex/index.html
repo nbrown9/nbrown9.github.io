@@ -1476,13 +1476,13 @@ pre {
     </div>
 
 
-<h2 id="using-regular-expressions-to-analyze-nsf-abstracts-data">Using Regular Expressions to Analyze NSF Abstracts Data</h2>
-
-<h3 id="overview">Overview:</h3>
+<h2 id="overview">Overview:</h2>
 <p>This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data used in this excercise was a folder of text files containing National Science Foundation grant award information.</p>
 
-<h3 id="part-1-description">Part 1: Description</h3>
-<h4 id="task-a---datasetcorpus-description">Task A - Dataset/Corpus Description:</h4>
+<div class="breaker"></div>
+
+<h2 id="part-1-description">Part 1: Description</h2>
+<h3 id="datasetcorpus-description">Dataset/Corpus Description:</h3>
 <p>“The National Science Foundation (NSF) is an independent federal agency created by Congress in 1950 “to promote the progress of science; to advance the national health, prosperity, and welfare; to secure the national defense…” NSF is vital because we support basic research and people to create knowledge that transforms the future.” [1] The NSF awards grants to researchers who want to obtain government funding for their projects. 
 The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. Split into 4,016 .txt files each one contains a seperate approved project. Each of the abstracts are organized into sections including the project title, funding amount, sponsor, and a breif description of the project. Each year the NSF awards funding to various scientific projects across the United States. The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. An example of a single file from the corpus is shown below”</p>
 
@@ -1541,9 +1541,11 @@ Abstract    :
               regarding the conservation and management of these magnificent                 
               mammals.</code></pre></figure>
 
-<h3 id="part-2-pre-processing">Part 2: Pre-processing</h3>
-<hr />
-<h4 id="task-b---process-text-files">Task B - Process Text Files</h4>
+<div class="breaker"></div>
+
+<h2 id="part-2-regex-processing">Part 2: Regex Processing</h2>
+
+<h3 id="process-text-files">Process Text Files</h3>
 <p>Analysis can be tricky to conduct on multiple text files. For the first part I will clean up the data and organize it in a tabular format. The overall steps for the process are:</p>
 <ol>
   <li>Use regular expression to parse text files</li>
@@ -1655,8 +1657,10 @@ Abstract    :
 </table>
 </div>
 
-<h3 id="part-3-distribution-of-sentence-lengths">Part 3: Distribution of Sentence Lengths</h3>
-<hr />
+<div class="breaker"></div>
+
+<h2 id="part-3-distribution-of-sentence-lengths">Part 3: Distribution of Sentence Lengths</h2>
+
 <p>For the final part of the analysis we want to see how many sentences there are for each file. First we will import and clean the file a little more, then we can write a function which will allow us to exam an the sentences of an individual document.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># read in csv as pandas dataframe, prevents type issues</span>
@@ -1824,7 +1828,7 @@ Abstract    :
 </table>
 </div>
 
-<h4 id="create-final-table">Create Final Table</h4>
+<h3 id="create-final-table">Create Final Table</h3>
 <p>Create the final table showing the number of sentences in a given abstract. Change the variable to select a row or you can use the loop to print them all. Showing one for demonstration purposes.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># set row_choice to whatever row you want to analyze the abstract of</span>
@@ -1860,7 +1864,9 @@ Abstract    :
 Number of sentences:  9
 </code></pre></div></div>
 
-<h3 id="bibliography">Bibliography</h3>
+<div class="breaker"></div>
+
+<h2 id="bibliography">Bibliography</h2>
 
 <p style="font-size: 11pt;">
 <ul style="list-style:none;">

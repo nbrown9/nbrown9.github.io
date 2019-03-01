@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://nicholaslbrown.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nicholaslbrown.com/" rel="alternate" type="text/html" /><updated>2019-02-28T19:03:59-05:00</updated><id>https://nicholaslbrown.com/feed.xml</id><title type="html">Nicholas L Brown</title><subtitle>A blog about data, technology and everything else</subtitle><entry><title type="html">Parsing Text Files with Regular Expression</title><link href="https://nicholaslbrown.com/parsing-text-with-regex/" rel="alternate" type="text/html" title="Parsing Text Files with Regular Expression" /><published>2019-02-28T18:47:00-05:00</published><updated>2019-02-28T18:47:00-05:00</updated><id>https://nicholaslbrown.com/parsing-text-with-regex</id><content type="html" xml:base="https://nicholaslbrown.com/parsing-text-with-regex/">&lt;h2 id=&quot;using-regular-expressions-to-analyze-nsf-abstracts-data&quot;&gt;Using Regular Expressions to Analyze NSF Abstracts Data&lt;/h2&gt;
-
-&lt;h3 id=&quot;overview&quot;&gt;Overview:&lt;/h3&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://nicholaslbrown.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nicholaslbrown.com/" rel="alternate" type="text/html" /><updated>2019-02-28T19:14:03-05:00</updated><id>https://nicholaslbrown.com/feed.xml</id><title type="html">Nicholas L Brown</title><subtitle>A blog about data, technology and everything else</subtitle><entry><title type="html">Parsing Text Files with Regular Expression</title><link href="https://nicholaslbrown.com/parsing-text-with-regex/" rel="alternate" type="text/html" title="Parsing Text Files with Regular Expression" /><published>2019-02-28T18:47:00-05:00</published><updated>2019-02-28T18:47:00-05:00</updated><id>https://nicholaslbrown.com/parsing-text-with-regex</id><content type="html" xml:base="https://nicholaslbrown.com/parsing-text-with-regex/">&lt;h2 id=&quot;overview&quot;&gt;Overview:&lt;/h2&gt;
 &lt;p&gt;This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data used in this excercise was a folder of text files containing National Science Foundation grant award information.&lt;/p&gt;
 
-&lt;h3 id=&quot;part-1-description&quot;&gt;Part 1: Description&lt;/h3&gt;
-&lt;h4 id=&quot;task-a---datasetcorpus-description&quot;&gt;Task A - Dataset/Corpus Description:&lt;/h4&gt;
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;part-1-description&quot;&gt;Part 1: Description&lt;/h2&gt;
+&lt;h3 id=&quot;datasetcorpus-description&quot;&gt;Dataset/Corpus Description:&lt;/h3&gt;
 &lt;p&gt;“The National Science Foundation (NSF) is an independent federal agency created by Congress in 1950 “to promote the progress of science; to advance the national health, prosperity, and welfare; to secure the national defense…” NSF is vital because we support basic research and people to create knowledge that transforms the future.” [1] The NSF awards grants to researchers who want to obtain government funding for their projects. 
 The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. Split into 4,016 .txt files each one contains a seperate approved project. Each of the abstracts are organized into sections including the project title, funding amount, sponsor, and a breif description of the project. Each year the NSF awards funding to various scientific projects across the United States. The text corpus used in this report are text documents containing the abstracts of approved projects from 1990 - 2003. An example of a single file from the corpus is shown below”&lt;/p&gt;
 
@@ -63,9 +63,11 @@ Abstract    :
               regarding the conservation and management of these magnificent                 
               mammals.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h3 id=&quot;part-2-pre-processing&quot;&gt;Part 2: Pre-processing&lt;/h3&gt;
-&lt;hr /&gt;
-&lt;h4 id=&quot;task-b---process-text-files&quot;&gt;Task B - Process Text Files&lt;/h4&gt;
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;part-2-regex-processing&quot;&gt;Part 2: Regex Processing&lt;/h2&gt;
+
+&lt;h3 id=&quot;process-text-files&quot;&gt;Process Text Files&lt;/h3&gt;
 &lt;p&gt;Analysis can be tricky to conduct on multiple text files. For the first part I will clean up the data and organize it in a tabular format. The overall steps for the process are:&lt;/p&gt;
 &lt;ol&gt;
   &lt;li&gt;Use regular expression to parse text files&lt;/li&gt;
@@ -177,8 +179,10 @@ Abstract    :
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;h3 id=&quot;part-3-distribution-of-sentence-lengths&quot;&gt;Part 3: Distribution of Sentence Lengths&lt;/h3&gt;
-&lt;hr /&gt;
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;part-3-distribution-of-sentence-lengths&quot;&gt;Part 3: Distribution of Sentence Lengths&lt;/h2&gt;
+
 &lt;p&gt;For the final part of the analysis we want to see how many sentences there are for each file. First we will import and clean the file a little more, then we can write a function which will allow us to exam an the sentences of an individual document.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# read in csv as pandas dataframe, prevents type issues&lt;/span&gt;
@@ -346,7 +350,7 @@ Abstract    :
 &lt;/table&gt;
 &lt;/div&gt;
 
-&lt;h4 id=&quot;create-final-table&quot;&gt;Create Final Table&lt;/h4&gt;
+&lt;h3 id=&quot;create-final-table&quot;&gt;Create Final Table&lt;/h3&gt;
 &lt;p&gt;Create the final table showing the number of sentences in a given abstract. Change the variable to select a row or you can use the loop to print them all. Showing one for demonstration purposes.&lt;/p&gt;
 
 &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# set row_choice to whatever row you want to analyze the abstract of&lt;/span&gt;
@@ -382,13 +386,15 @@ Abstract    :
 Number of sentences:  9
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h3 id=&quot;bibliography&quot;&gt;Bibliography&lt;/h3&gt;
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;bibliography&quot;&gt;Bibliography&lt;/h2&gt;
 
 &lt;p style=&quot;font-size: 11pt;&quot;&gt;
 &lt;ul style=&quot;list-style:none;&quot;&gt;
     &lt;li&gt;[1] https://www.nsf.gov/about/ &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="regular expression" /><category term="text parsing" /><category term="natural language processing" /><category term="python" /><category term="pandas" /><summary type="html">Using Regular Expressions to Analyze NSF Abstracts Data</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nicholaslbrown.com/assets/images/blog/regex.png" /></entry><entry><title type="html">Forecasting Market Reaction Using Twitter</title><link href="https://nicholaslbrown.com/forecasting-market-reaction/" rel="alternate" type="text/html" title="Forecasting Market Reaction Using Twitter" /><published>2019-02-27T21:10:00-05:00</published><updated>2019-02-27T21:10:00-05:00</updated><id>https://nicholaslbrown.com/forecasting-market-reaction</id><content type="html" xml:base="https://nicholaslbrown.com/forecasting-market-reaction/">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
+&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="regular expression" /><category term="text parsing" /><category term="natural language processing" /><category term="python" /><category term="pandas" /><summary type="html">Overview: This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data used in this excercise was a folder of text files containing National Science Foundation grant award information.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://nicholaslbrown.com/assets/images/blog/regex.png" /></entry><entry><title type="html">Forecasting Market Reaction Using Twitter</title><link href="https://nicholaslbrown.com/forecasting-market-reaction/" rel="alternate" type="text/html" title="Forecasting Market Reaction Using Twitter" /><published>2019-02-27T21:10:00-05:00</published><updated>2019-02-27T21:10:00-05:00</updated><id>https://nicholaslbrown.com/forecasting-market-reaction</id><content type="html" xml:base="https://nicholaslbrown.com/forecasting-market-reaction/">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
 
 &lt;p&gt;Using Twitter and text mining sentiment classification methods I sought to find a relationship between tweets about a company and its market performance. Multinomial Naive Bayes proved to be effective at sentiment classification however the full capability of the model was limited by the quality of the training data. For the final analysis simple linear regression was conducted on the daily sentiment score and two market indicators, daily return and closing stock price. No trends were readily apparent in the data I sampled however I believe more research could yield interesting and strong results.&lt;/p&gt;
 
