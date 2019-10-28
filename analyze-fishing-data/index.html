@@ -1493,18 +1493,16 @@ pre {
     </div>
 
 
-<h1 id="fishing-with-python-analyzing-the-best-fishing-conditions">Fishing with Python: Analyzing the Best Fishing Conditions</h1>
+<h2 id="i-overview">I. Overview</h2>
 
-<h2 id="i-introduction">I. Introduction</h2>
-<hr />
 <p>For this project I decided to use the scripting skills I learned to build a python program which could analyze data from my various fishing trips. By the end of this project I hope to demonstrate how I can import, analyze, and question my fishing data attempting to understand more about what makes a successful trip. This notebook was used to import, clean, and do analysis on the data. In the future I would leave the data processing up to python and move the visualization portion to a tool like Tableau or Power BI.</p>
 
 <h2 id="ii-dataset-description-and-source">II. Dataset Description and Source</h2>
-<hr />
+
 <p>Data for this analysis was generated using a python coded data generator. I ended up with a small dataset of around <b>400 lines</b> with <b>4 columns</b>. By the end of this analysis I hope to have extended the number of variables in this catch dataset significantly and derive some actionable insight from it. The initial dataset has only four columns: species caught (the name of the fish), latitude, longitude, and datetime of the catch. Later on in part five the final three columns will be used to make various API queries to extend the dataset. Finally in part six I will be doing my final analysis seeking to tie together the data into a coherent answer to my question.</p>
 
 <h2 id="iii-dataset-pre-processing">III. Dataset Pre-processing</h2>
-<hr />
+
 <p>For this part I will import and clean the original information imported into the dataset which will allow me to ask my analysis questions later in this report. Though I originally wanted to make a whole system dedicated to managing new entries I decided that I needed more data to get the application framework started else both myself and the program would lack any data to actually conduct analysis on. For this part I worked in multiple steps:</p>
 <ol>
   <li>Import dataset</li>
@@ -1706,7 +1704,7 @@ dtype: int64
 </code></pre></div></div>
 
 <h2 id="iv-initial-dataset-exploratory-analysis">IV. Initial Dataset Exploratory Analysis</h2>
-<hr />
+
 <p>Now that we have a bare-minimum clean dataset as a starting point I want to conduct a quick analysis and exploration before we add features to better understand the dataset. <b>Some initial exploration questions I want to answer are: </b></p>
 <ol>
   <li>What are the most popular species in the dataset ?</li>
@@ -1860,7 +1858,7 @@ dtype: int64
 <p><img src="/assets/images/blog/fishing_post/output_31_0.png" alt="png" /></p>
 
 <h2 id="v-dataset-build-out">V. Dataset Build Out</h2>
-<hr />
+
 <p>This part of the assignment I will be using APIs to build out the dataset obtaining some new information. After this process is complete we will have a dataset where some serious analysis can be done combining the lookup data with our current dataset. Because we have a date/time and location (Latitude and Longitude) we can easily get other information derived from these few data points. This is great because we dont have to worry about maintaining an entire database with tides, weather, and other information which there are entire organizations dedicated to collecting. Though we may want to store our heavily modified dataframe later to avoid excessive lookups and queries.</p>
 
 <h5 id="imports-1">Imports</h5>
@@ -2458,7 +2456,7 @@ dtype: int64
 </code></pre></div></div>
 
 <h2 id="vi-main-analysis">VI. Main Analysis</h2>
-<hr />
+
 <p>Now that we have a dataset with way more indicators which I believe will help build a profile of successful catches helping me on my future trips. I plan on looking at each of the added indicators seperatley as well as together and in the end draw conclusions about the ideal values to look for when planning a trip.<b> This is the part where I will answer my main question of “What are the ideal conditions for catching a fish?”</b> in other words <b>“What makes a successful fishing trip?”</b></p>
 
 <h3 id="what-are-the-ideal-wind-conditions">What are the Ideal Wind Conditions?</h3>
@@ -2609,7 +2607,7 @@ dtype: int64
 <p>This map actually shows some potentially new great spots to try fishing! I initially thought that the catch clusters would align with my locations however this shows where the recently productive areas are. Perhaps it is time I rethought where one needs to go to catch fish especially considering the ever changing state of the ocean it is possible that patterns will become more erratic in the future and these analytical skills could help to decipher a lot of questions about the nature of the local ecosystem. For example, the largest cluster (by area) is actually east of two locations which used to be considered very popular, perhaps this shows how as summers become warmer each year the fish are moving into deeper water further away from the coast. It would also explain the very poor beach where there were no recorded catches.</p>
 
 <h2 id="vii-conclusion">VII. Conclusion</h2>
-<hr />
+
 <p>As I worked through this analysis my expectations and understanding shifted drastically. Initially I sought to produce an analysis that could tell the the optimal days and situations to fish however I soon realized that this type of analysis would not be very useful from an applied standpoint. This is because I realized most people (including myself) do not have the luxury of simply choosing the best days to fish from a list. We have jobs and family commitments which limit our fishing days to a specific window where we go regardless of specific temp/pressure (weather permitting). Realizing this I decided to move forward with a much more user centric approach whereby I sought to understand how to optomize and analyze the trips I take and the data I consume. My largest question has been answered as this analysis has helped me to understand how various metrics common on fishing reports can be interpretted.<b>This analysis was most exciting to me because it demonstrates how someone with a little bit of data and analytical skills can gain insight and wisdom into patterns and trends previously only apparent to the most seasoned fisherman.</b> If I want to have success I now know what locations (lat,lon) to go to when the wind is blowing North, the temperature is not too warm, and the atmospheric pressure is high.</p>
 
 
