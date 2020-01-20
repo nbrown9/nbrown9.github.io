@@ -25,24 +25,24 @@
     <meta property="og:type" content="profile">
 
     <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Insights from Wardriving Data | Nicholas L Brown</title>
+<title>LDA Topic Modelling | Nicholas L Brown</title>
 <meta name="generator" content="Jekyll v3.7.4" />
-<meta property="og:title" content="Insights from Wardriving Data" />
+<meta property="og:title" content="LDA Topic Modelling" />
 <meta name="author" content="nicholasbrown" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="A small post doing some preliminary analysis on wardriving data" />
-<meta property="og:description" content="A small post doing some preliminary analysis on wardriving data" />
-<link rel="canonical" href="https://www.nicholaslbrown.com/insights-from-wardriving-data/" />
-<meta property="og:url" content="https://www.nicholaslbrown.com/insights-from-wardriving-data/" />
+<meta name="description" content="Topic modelling of text using Mallet and LDA" />
+<meta property="og:description" content="Topic modelling of text using Mallet and LDA" />
+<link rel="canonical" href="https://www.nicholaslbrown.com/lda-topic-modeling/" />
+<meta property="og:url" content="https://www.nicholaslbrown.com/lda-topic-modeling/" />
 <meta property="og:site_name" content="Nicholas L Brown" />
-<meta property="og:image" content="https://www.nicholaslbrown.com/assets/images/blog/dish.png" />
+<meta property="og:image" content="https://www.nicholaslbrown.com/assets/images/blog/mallet.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-03-28T10:38:00-04:00" />
+<meta property="article:published_time" content="2020-01-20T11:43:00-05:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="@" />
 <meta name="twitter:creator" content="@nicholasbrown" />
 <script type="application/ld+json">
-{"description":"A small post doing some preliminary analysis on wardriving data","author":{"@type":"Person","name":"nicholasbrown"},"@type":"BlogPosting","url":"https://www.nicholaslbrown.com/insights-from-wardriving-data/","image":"https://www.nicholaslbrown.com/assets/images/blog/dish.png","headline":"Insights from Wardriving Data","dateModified":"2019-03-28T10:38:00-04:00","datePublished":"2019-03-28T10:38:00-04:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nicholaslbrown.com/insights-from-wardriving-data/"},"@context":"http://schema.org"}</script>
+{"description":"Topic modelling of text using Mallet and LDA","author":{"@type":"Person","name":"nicholasbrown"},"@type":"BlogPosting","url":"https://www.nicholaslbrown.com/lda-topic-modeling/","image":"https://www.nicholaslbrown.com/assets/images/blog/mallet.png","headline":"LDA Topic Modelling","dateModified":"2020-01-20T11:43:00-05:00","datePublished":"2020-01-20T11:43:00-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.nicholaslbrown.com/lda-topic-modeling/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
     
@@ -68,7 +68,7 @@
 <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
 
 
-    <link rel="canonical" href="https://www.nicholaslbrown.com/insights-from-wardriving-data/">
+    <link rel="canonical" href="https://www.nicholaslbrown.com/lda-topic-modeling/">
     <link rel="alternate" type="application/rss+xml" title="" href="https://www.nicholaslbrown.com/feed.xml" />
 
     <style>
@@ -1454,18 +1454,18 @@ pre {
 
 
 
-    <img class="title-image" src="/assets/images/blog/dish.png" alt="Insights from Wardriving Data">
+    <img class="title-image" src="/assets/images/blog/mallet.png" alt="LDA Topic Modelling">
 
 
-<h1 class="title">Insights from Wardriving Data</h1>
+<h1 class="title">LDA Topic Modelling</h1>
 
 <span class="date">
-    <time datetime="28-03-2019">Thursday. March 28, 2019</time>
+    <time datetime="20-01-2020">Monday. January 20, 2020</time>
      - <span class="reading-time" title="Estimated read time">
     
 
     
-        12 mins
+        1 min
     
 </span>
 
@@ -1474,474 +1474,16 @@ pre {
 
     <div class="post-tags">
         
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#csv-parsing">csv parsing</a>
+            <a class="item" href="https://www.nicholaslbrown.com/tags/#lda">LDA</a>
         
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#wardriving">wardriving</a>
+            <a class="item" href="https://www.nicholaslbrown.com/tags/#topic-modelling">topic modelling</a>
         
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#wifi">wifi</a>
-        
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#network-scanning">network scanning</a>
-        
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#python">python</a>
-        
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#pandas">pandas</a>
-        
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#aircrack-ng">aircrack-ng</a>
-        
-            <a class="item" href="https://www.nicholaslbrown.com/tags/#kali-linux">kali linux</a>
+            <a class="item" href="https://www.nicholaslbrown.com/tags/#mallet">mallet</a>
         
     </div>
 
 
-<h2 id="introduction">Introduction</h2>
-
-<p>The dataset I chose for this post is one I personally collected during wireless surveys conducted around the Syracuse University campus. Otherwise known as wardriving, using the aircrack-ng suite of software I collected data about the various local wlan environments including BSSID, SSID, security type, devices connected, and signal strength at multiple locations surrounding campus. Like much hacker software, the tools used for the survey were open source with varying driver support, as a consequence of the spotty support strange results and other issues are prevalent in the data. For this project I hope to first import and clean the data which should be a difficult task given the various nulls and inconsistent format. With a clean dataframe I would like to conduct some simply analysis.</p>
-
-<h4 id="import-data">Import Data</h4>
-<p>The code below should list all the files in our /data directory and then read them into a series of dataframes.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># we need the os package to get files in directory</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-
-<span class="c"># Get a list of data_files in the data folder</span>
-<span class="n">dir_list</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="s">"data/"</span><span class="p">)</span>
-
-<span class="c"># .DS_Store is a hidden file found in directories on the macOS operating system</span>
-<span class="n">dir_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s">".DS_Store"</span><span class="p">)</span> 
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Now we should iterate through the list and open each data_file to a dataframe</span>
-<span class="n">frame_list</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">f_name</span> <span class="ow">in</span> <span class="n">dir_list</span><span class="p">:</span>
-    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'data/'</span><span class="o">+</span><span class="n">f_name</span><span class="p">,</span><span class="n">index_col</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">error_bad_lines</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-    <span class="n">frame_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>    
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>b'Skipping line 109: expected 15 fields, saw 16\n'
-</code></pre></div></div>
-
-<h4 id="concatenate-and-clean-data">Concatenate and Clean Data</h4>
-<p>For this part I will first add a new column to each of the data frames with its specific index in the list. This index is also indicative of the location where the data was collected. This will be a useful value to bin our data on and be used in the later analysis. In addition to adding some variables I conducted some mean subsitution where necessary and check data types.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Before we are going to concatenate all of the </span>
-<span class="c">#  dataframes together we want to add a label so we </span>
-<span class="c">#  know what site they came frome </span>
-<span class="k">for</span> <span class="n">frame_index</span><span class="p">,</span><span class="n">dframe</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">frame_list</span><span class="p">):</span>
-    <span class="n">dframe</span><span class="p">[</span><span class="s">'Location'</span><span class="p">]</span> <span class="o">=</span> <span class="n">frame_index</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Now I creat my big data frame putting the locations together</span>
-<span class="c"># so I can do some analysis and more cleaning</span>
-<span class="n">my_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">frame_list</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
-</code></pre></div></div>
-
-<h2 id="description--analysis">Description / Analysis</h2>
-
-<h3 id="summary-analysis">Summary Analysis</h3>
-
-<p>Using the describe() method of a pandas dataframe yields several very interesting and insightful statistics about the wardriving data. Some points of interest I found for the non numeric variables I outlined below:</p>
-<ul>
-  <li>
-    <p><strong>Channel:</strong> 66 different unique wifi channels (frequency) with the most popular being channel 11 on 2.4ghz</p>
-  </li>
-  <li>
-    <p><strong>Manufacturer:</strong> 19 Different wifi manufacturers, not as many as I would have thought but consider the few options a place like best buy offers for home routers. Manufacturers were determined by MAC address</p>
-  </li>
-  <li>
-    <p><strong>Privacy:</strong> This is what many wardrivers are interested in, we can see the prevalence of WPA2 which is good, it means most people are securing their networks with the latest security.</p>
-  </li>
-  <li>
-    <p><strong>Authentication:</strong> Related to privacy this is the type of auth used to access the network, most common is PSK or Pre shared key, this is the most common setup in a home network in which all users access the network with the same password.</p>
-  </li>
-</ul>
-
-<p>Numeric variables describe also yielded some interesting insight:</p>
-<ul>
-  <li>
-    <p><strong>Power:</strong> usually measured as dBm the power of the signal recieved, the average of the signal strength can give us an idea for how powerful the average AP’s antenna’s are. With the mean at -73.45 dBm and an IQR of ~13.00 it is apparent that most access points are at about the same power which makes sense given they all must adhere to the FCC rules governing transmit power.</p>
-  </li>
-  <li>
-    <p><strong>ID-length:</strong> the length of characters in a given wifi networks name. This is very intersting because we can see the average length of a network name as well as the maximum and minimum. The mean length of a network name is 11.6 characters with a maximum length of 32 characters and a minimum or 0 (hidden network).</p>
-  </li>
-  <li>
-    <p><strong>Beacons:</strong> Beacons are wireless frames containing network information which are broadcasted at a certain rate to all devices in range. The number of beacons is interesting for the same reason why Power is, we can see how close the average network is and how much data on average is communicated from the AP to the wardriver. On average an AP sent over 5.505 beacons to the listener, pretty good.</p>
-  </li>
-</ul>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">my_data</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s">"all"</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>BSSID</th>
-      <th>Manufacturer</th>
-      <th>First time seen</th>
-      <th>Last time seen</th>
-      <th>channel</th>
-      <th>Speed</th>
-      <th>Privacy</th>
-      <th>Cipher</th>
-      <th>Authentication</th>
-      <th>Power</th>
-      <th># beacons</th>
-      <th># IV</th>
-      <th>LAN IP</th>
-      <th>ID-length</th>
-      <th>ESSID</th>
-      <th>Location</th>
-      <th>Key</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>count</th>
-      <td>956</td>
-      <td>208</td>
-      <td>956</td>
-      <td>956</td>
-      <td>956.0</td>
-      <td>956.0</td>
-      <td>956</td>
-      <td>904</td>
-      <td>894</td>
-      <td>894.000000</td>
-      <td>894.000000</td>
-      <td>746.000000</td>
-      <td>746</td>
-      <td>894.000000</td>
-      <td>894</td>
-      <td>956.000000</td>
-      <td>686</td>
-    </tr>
-    <tr>
-      <th>unique</th>
-      <td>931</td>
-      <td>19</td>
-      <td>249</td>
-      <td>232</td>
-      <td>66.0</td>
-      <td>22.0</td>
-      <td>35</td>
-      <td>14</td>
-      <td>3</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>1</td>
-      <td>NaN</td>
-      <td>543</td>
-      <td>NaN</td>
-      <td>2</td>
-    </tr>
-    <tr>
-      <th>top</th>
-      <td>BA:00:C6:7F:08:DF</td>
-      <td>Cisco Systems, Inc</td>
-      <td>2017-11-10 19:03:47</td>
-      <td>2017-11-10 18:13:02</td>
-      <td>11.0</td>
-      <td>54.0</td>
-      <td>WPA2</td>
-      <td>CCMP</td>
-      <td>PSK</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.  0.  0.  0</td>
-      <td>NaN</td>
-      <td></td>
-      <td>NaN</td>
-      <td></td>
-    </tr>
-    <tr>
-      <th>freq</th>
-      <td>8</td>
-      <td>140</td>
-      <td>29</td>
-      <td>28</td>
-      <td>136.0</td>
-      <td>634.0</td>
-      <td>679</td>
-      <td>678</td>
-      <td>646</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>746</td>
-      <td>NaN</td>
-      <td>72</td>
-      <td>NaN</td>
-      <td>684</td>
-    </tr>
-    <tr>
-      <th>mean</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-73.456376</td>
-      <td>5.505593</td>
-      <td>1.815013</td>
-      <td>NaN</td>
-      <td>11.652125</td>
-      <td>NaN</td>
-      <td>3.689331</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>std</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>16.699766</td>
-      <td>9.027981</td>
-      <td>17.650160</td>
-      <td>NaN</td>
-      <td>6.527126</td>
-      <td>NaN</td>
-      <td>2.220026</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>min</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-91.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>25%</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-83.000000</td>
-      <td>1.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>9.000000</td>
-      <td>NaN</td>
-      <td>2.000000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>50%</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-78.500000</td>
-      <td>4.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>12.000000</td>
-      <td>NaN</td>
-      <td>4.000000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>75%</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-70.000000</td>
-      <td>7.000000</td>
-      <td>0.000000</td>
-      <td>NaN</td>
-      <td>14.000000</td>
-      <td>NaN</td>
-      <td>6.000000</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>max</th>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>-1.000000</td>
-      <td>114.000000</td>
-      <td>332.000000</td>
-      <td>NaN</td>
-      <td>32.000000</td>
-      <td>NaN</td>
-      <td>7.000000</td>
-      <td>NaN</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<h3 id="analysis">Analysis</h3>
-<p>To get some more insight into the data I wanted to create some visualizations to help understand certain questions I had in addition to some more sophisticated data wrangling.</p>
-
-<h4 id="which-location-has-the-highest-average-transmission-power">Which Location Has the highest average transmission power?</h4>
-<p>To answer this question I have to bin the dataframe by location and calculate mean power for each location. From the table I printed below we can see that the Power level is highest in location 1 at -71.782 and lowest at location 0 with a power level of -78.933 dBm</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># First create a loop to get all of the locations</span>
-<span class="n">power_means</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">loc_numb</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
-    <span class="c"># select only location part of Dataframe</span>
-    <span class="n">new_df</span> <span class="o">=</span> <span class="n">my_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">my_data</span><span class="p">[</span><span class="s">'Location'</span><span class="p">]</span> <span class="o">==</span> <span class="n">loc_numb</span><span class="p">]</span>
-    <span class="c"># calculate mean power</span>
-    <span class="n">mean_power</span> <span class="o">=</span> <span class="n">new_df</span><span class="p">[</span><span class="s">" Power"</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-    <span class="c"># append mean power to list</span>
-    <span class="n">power_means</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean_power</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># print header</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Location |  Power Level</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
-
-<span class="c"># Print out results and location</span>
-<span class="k">for</span> <span class="n">loc_val</span><span class="p">,</span><span class="n">power_val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">power_means</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">loc_val</span><span class="p">,</span><span class="s">"       | "</span><span class="p">,</span><span class="n">power_val</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Location |  Power Level
-
-0        |  -78.93333333333334
-1        |  -71.78260869565217
-2        |  -73.39189189189189
-3        |  -73.27118644067797
-4        |  -75.51886792452831
-5        |  -71.91428571428571
-6        |  -71.85185185185185
-</code></pre></div></div>
-
-<h4 id="which-location-has-the-most-openvulnerable-networks">Which location has the most open/vulnerable networks?</h4>
-<p>If we pretend for a moment that we are someone with bad intentions our data analysis skills can help us to look for vulnerabilities or the best area to attack. If we are nefarious war drivers we can find which areas to hit based on who has the less secure/ unsecure networks.</p>
-
-<p>Based on the table printed below we can see that zone 2 would be the best area for a hacker to setup shop if they wanted a target rich environment with multiple vulnerable networks. At 57 open networks there is no shortage of WLANs a hacker could connect to without interference in this location. The second best locations are 0 and 1 with only 17 open networks.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">priv_counts</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="k">for</span> <span class="n">loc_numb</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">):</span>
-    <span class="c"># select only location part of Dataframe</span>
-    <span class="n">new_df</span> <span class="o">=</span> <span class="n">my_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">my_data</span><span class="p">[</span><span class="s">'Location'</span><span class="p">]</span> <span class="o">==</span> <span class="n">loc_numb</span><span class="p">]</span>
-    <span class="c"># calculate length of privacy column where value is OPN or open network!</span>
-    <span class="n">priv_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">new_df</span><span class="p">[</span><span class="n">new_df</span><span class="p">[</span><span class="s">' Privacy'</span><span class="p">]</span> <span class="o">==</span> <span class="s">' OPN'</span><span class="p">])</span>
-    <span class="c"># append mean power to list</span>
-    <span class="n">priv_counts</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">priv_count</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># print header</span>
-<span class="k">print</span><span class="p">(</span><span class="s">"Location |  OPN Count</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
-
-<span class="c"># Print out results and location</span>
-<span class="k">for</span> <span class="n">loc_val</span><span class="p">,</span><span class="n">priv_val</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">priv_counts</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">loc_val</span><span class="p">,</span><span class="s">"       | "</span><span class="p">,</span><span class="n">priv_val</span><span class="p">)</span>
-</code></pre></div></div>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Location |  OPN Count
-
-0        |  17
-1        |  17
-2        |  57
-3        |  15
-4        |  0
-5        |  2
-6        |  5
-</code></pre></div></div>
-
-<h4 id="visualizations">Visualizations</h4>
-<p>I wanted to make a pie chart to show the security features of all of the networks, This is some code I had used to initally analyze some other aspects of the data however it has been adapted here for this analysis of security types on the network.</p>
-
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-
-<span class="c">## Create labels</span>
-<span class="n">privlist</span> <span class="o">=</span> <span class="n">my_data</span><span class="p">[</span><span class="s">' Privacy'</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="n">labels</span> <span class="o">=</span> <span class="p">[</span><span class="s">' WPA2'</span><span class="p">,</span><span class="s">' OPN'</span><span class="p">,</span> <span class="s">' WEP'</span><span class="p">,</span> <span class="s">' WPA2 WPA'</span><span class="p">,</span> <span class="s">' WPA'</span><span class="p">]</span>
-<span class="n">sizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">privlist</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">' WPA2'</span><span class="p">),</span> <span class="n">privlist</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">' OPN'</span><span class="p">),</span> <span class="n">privlist</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">' WEP'</span><span class="p">),</span> <span class="n">privlist</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">' WPA2 WPA'</span><span class="p">),</span> <span class="n">privlist</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s">' WPA'</span><span class="p">)]</span>
-
-<span class="c"># Draw the piechart</span>
-<span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s">'gold'</span><span class="p">,</span> <span class="s">'yellowgreen'</span><span class="p">,</span> <span class="s">'lightcoral'</span><span class="p">,</span> <span class="s">'lightskyblue'</span><span class="p">,</span><span class="s">'mediumpurple'</span><span class="p">]</span>
-<span class="n">explode</span> <span class="o">=</span> <span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>  <span class="c"># explode 1st slice</span>
-<span class="n">labels2</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="c"># for loop to create labels for key</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">labels</span><span class="p">)):</span>
-    <span class="n">tempstr</span> <span class="o">=</span> <span class="n">labels</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="s">" ("</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">sizes</span><span class="p">[</span><span class="n">i</span><span class="p">])</span><span class="o">+</span><span class="s">") "</span>
-    <span class="n">labels2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tempstr</span><span class="p">)</span>
-
-    
-<span class="c"># Plot our chart </span>
-<span class="n">patches</span><span class="p">,</span> <span class="n">texts</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">sizes</span><span class="p">,</span> <span class="n">explode</span><span class="o">=</span><span class="n">explode</span> <span class="p">,</span><span class="n">colors</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">startangle</span><span class="o">=</span><span class="mi">120</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">patches</span><span class="p">,</span> <span class="n">labels2</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s">"best"</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s">'Security Settings'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s">'equal'</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-
-</code></pre></div></div>
-
-<p><img src="/assets/images/blog/output_20_0.png" alt="png" /></p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>This dataset shows how interesting insight can be derived from data that looks confusing and unstructured at first. The tremendous power of Pandas dataframes and python are evident, I’m sure some excel gurus could have done this without programming at all, but the benefits of programming are endless. Now we have a base for a small script which could do more analysis on the fly during future wardrives, automating a large part of our inital analytical process. Despite my apprehensions about working with this data I am very pleased with how everything turned out.</p>
+<p><a href="/assets/reports/LDA_Topic_Modelling.pdf">Download Report</a></p>
 
 
 
@@ -1966,16 +1508,6 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
             
                 
@@ -1984,27 +1516,7 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
             
                 
             
@@ -2023,9 +1535,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2041,9 +1551,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2059,9 +1567,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2077,93 +1583,7 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    
-                    <h4>Related Posts</h4>
-                    <ul>
-                    
-                    <li class="relatedPost">
-                        <a href="https://www.nicholaslbrown.com/analyze-fishing-data/">Visual Analysis of Fishing Data with Python
-                        
-                        </a>
-                    </li>
-                    
-                    
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
             
                 
             
@@ -2182,9 +1602,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2200,9 +1618,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2218,18 +1634,7 @@ pre {
             
                 
             
-                
-            
-                
-                    
-                    <li class="relatedPost">
-                        <a href="https://www.nicholaslbrown.com/extending-data-with-apis/">Extending Data with APIs
-                        
-                        </a>
-                    </li>
-                    
-                    
-                
+        
             
                 
             
@@ -2245,9 +1650,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2263,99 +1666,7 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
             
                 
             
@@ -2374,9 +1685,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2392,9 +1701,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2410,9 +1717,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2428,81 +1733,7 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
             
                 
             
@@ -2521,9 +1752,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2539,16 +1768,6 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
             
                 
@@ -2557,54 +1776,7 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    
-                    <li class="relatedPost">
-                        <a href="https://www.nicholaslbrown.com/parsing-text-with-regex/">Parsing Text Files with Regular Expression
-                        
-                        </a>
-                    </li>
-                    
-                    
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
             
                 
             
@@ -2623,9 +1795,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2641,9 +1811,7 @@ pre {
             
                 
             
-                
-            
-                
+        
             
                 
             
@@ -2659,72 +1827,7 @@ pre {
             
                 
             
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
         
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-        
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                    
-                    <li class="relatedPost">
-                        <a href="https://www.nicholaslbrown.com/forecasting-market-reaction/">Forecasting Market Reaction Using Twitter
-                        
-                        </a>
-                    </li>
-                    
-                    
-                
             
                 
             
@@ -2734,8 +1837,6 @@ pre {
             
         
     
-    
-        </ul>
     
 </div>
 
@@ -2754,7 +1855,7 @@ pre {
         <div class="share">
             <!-- Note: Only use three share links if your site width is set to large -->
             <!-- If site width is set to normal, you may choose any two share links -->
-            <a class="twitter" href="https://twitter.com/intent/tweet?text=https://www.nicholaslbrown.com/insights-from-wardriving-data/ - Insights from Wardriving Data by @nlbrown9">
+            <a class="twitter" href="https://twitter.com/intent/tweet?text=https://www.nicholaslbrown.com/lda-topic-modeling/ - LDA Topic Modelling by @nlbrown9">
                 <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg><span class="icon-twitter">Tweet</span>
             </a>
 
@@ -2762,15 +1863,15 @@ pre {
                 <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg><span class="icon-facebook-rect">Share</span>
             </a>
 
-            <!-- <a class="google-plus" href="https://plus.google.com/share?url=https://www.nicholaslbrown.com/insights-from-wardriving-data/" target="_blank">
+            <!-- <a class="google-plus" href="https://plus.google.com/share?url=https://www.nicholaslbrown.com/lda-topic-modeling/" target="_blank">
                 <svg class="icon icon-google-plus"><use xlink:href="#icon-google-plus"></use></svg><span class="icon-google-plus">Share</span>
             </a> -->
 
-            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.nicholaslbrown.com/insights-from-wardriving-data/&amp;title=Insights from Wardriving Data&amp;summary=A small post doing some preliminary analysis on wardriving data&amp;source=https://www.nicholaslbrown.com" target="_blank">
+            <!-- <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.nicholaslbrown.com/lda-topic-modeling/&amp;title=LDA Topic Modelling&amp;summary=Topic modelling of text using Mallet and LDA&amp;source=https://www.nicholaslbrown.com" target="_blank">
                 <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg><span class="icon-linkedin">Share</span>
             </a> -->
 
-            <!-- <a class="reddit" href="https://reddit.com/submit?url=https://www.nicholaslbrown.com/insights-from-wardriving-data/&amp;title=Insights from Wardriving Data" target="_blank">
+            <!-- <a class="reddit" href="https://reddit.com/submit?url=https://www.nicholaslbrown.com/lda-topic-modeling/&amp;title=LDA Topic Modelling" target="_blank">
                 <svg class="icon icon-reddit"><use xlink:href="#icon-reddit"></use></svg><span class="icon-reddit">Share</span>
             </a> -->
         </div>
