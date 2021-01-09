@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://www.nicholaslbrown.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.nicholaslbrown.com/" rel="alternate" type="text/html" /><updated>2020-04-01T15:35:36-04:00</updated><id>https://www.nicholaslbrown.com/feed.xml</id><title type="html">Nicholas Brown</title><subtitle>A blog about data, technology and everything else</subtitle><entry><title type="html">LDA Topic Modelling</title><link href="https://www.nicholaslbrown.com/lda-topic-modeling/" rel="alternate" type="text/html" title="LDA Topic Modelling" /><published>2020-01-20T11:43:00-05:00</published><updated>2020-01-20T11:43:00-05:00</updated><id>https://www.nicholaslbrown.com/lda-topic-modeling</id><content type="html" xml:base="https://www.nicholaslbrown.com/lda-topic-modeling/">&lt;p&gt;&lt;a href=&quot;/assets/reports/LDA_Topic_Modelling.pdf&quot;&gt;Download Report&lt;/a&gt;&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="LDA" /><category term="topic modelling" /><category term="mallet" /><summary type="html">Download Report</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/mallet.png" /></entry><entry><title type="html">DNA Storage and Tracking in the Information Age</title><link href="https://www.nicholaslbrown.com/privacy-and-security/" rel="alternate" type="text/html" title="DNA Storage and Tracking in the Information Age" /><published>2019-11-11T11:43:00-05:00</published><updated>2019-11-11T11:43:00-05:00</updated><id>https://www.nicholaslbrown.com/privacy-and-security</id><content type="html" xml:base="https://www.nicholaslbrown.com/privacy-and-security/">&lt;p&gt;&lt;a href=&quot;/assets/reports/Privacy_and_Security.pdf&quot;&gt;Download Report&lt;/a&gt;&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="ethics" /><category term="DNA" /><category term="information technology" /><category term="databases" /><category term="23andme" /><category term="ancestry.com" /><summary type="html">Download Report</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/dna.png" /></entry><entry><title type="html">Visual Analysis of Fishing Data with Python</title><link href="https://www.nicholaslbrown.com/analyze-fishing-data/" rel="alternate" type="text/html" title="Visual Analysis of Fishing Data with Python" /><published>2019-10-28T14:56:00-04:00</published><updated>2019-10-28T14:56:00-04:00</updated><id>https://www.nicholaslbrown.com/analyze-fishing-data</id><content type="html" xml:base="https://www.nicholaslbrown.com/analyze-fishing-data/">&lt;h2 id=&quot;i-overview&quot;&gt;I. Overview&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.7.4">Jekyll</generator><link href="https://www.nicholaslbrown.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.nicholaslbrown.com/" rel="alternate" type="text/html" /><updated>2021-01-09T12:13:15-05:00</updated><id>https://www.nicholaslbrown.com/feed.xml</id><title type="html">Nicholas Brown</title><subtitle>Data science and analytics</subtitle><entry><title type="html">Visual Analysis of Fishing Data with Python</title><link href="https://www.nicholaslbrown.com/analyze-fishing-data/" rel="alternate" type="text/html" title="Visual Analysis of Fishing Data with Python" /><published>2020-11-04T14:56:00-05:00</published><updated>2020-11-04T14:56:00-05:00</updated><id>https://www.nicholaslbrown.com/analyze-fishing-data</id><content type="html" xml:base="https://www.nicholaslbrown.com/analyze-fishing-data/">&lt;h2 id=&quot;i-overview&quot;&gt;I. Overview&lt;/h2&gt;
 
 &lt;p&gt;For this project I decided to use the scripting skills I learned to build a python program which could analyze data from my various fishing trips. By the end of this project I hope to demonstrate how I can import, analyze, and question my fishing data attempting to understand more about what makes a successful trip. This notebook was used to import, clean, and do analysis on the data. In the future I would leave the data processing up to python and move the visualization portion to a tool like Tableau or Power BI.&lt;/p&gt;
 
@@ -1113,267 +1113,176 @@ dtype: int64
 
 &lt;h2 id=&quot;vii-conclusion&quot;&gt;VII. Conclusion&lt;/h2&gt;
 
-&lt;p&gt;As I worked through this analysis my expectations and understanding shifted drastically. Initially I sought to produce an analysis that could tell the the optimal days and situations to fish however I soon realized that this type of analysis would not be very useful from an applied standpoint. This is because I realized most people (including myself) do not have the luxury of simply choosing the best days to fish from a list. We have jobs and family commitments which limit our fishing days to a specific window where we go regardless of specific temp/pressure (weather permitting). Realizing this I decided to move forward with a much more user centric approach whereby I sought to understand how to optomize and analyze the trips I take and the data I consume. My largest question has been answered as this analysis has helped me to understand how various metrics common on fishing reports can be interpretted.&lt;b&gt;This analysis was most exciting to me because it demonstrates how someone with a little bit of data and analytical skills can gain insight and wisdom into patterns and trends previously only apparent to the most seasoned fisherman.&lt;/b&gt; If I want to have success I now know what locations (lat,lon) to go to when the wind is blowing North, the temperature is not too warm, and the atmospheric pressure is high.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="boxplot" /><category term="dotplot" /><category term="histogram" /><category term="basemap" /><category term="matplotlib" /><category term="numpy" /><category term="python" /><category term="pandas" /><summary type="html">I. Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/bass.png" /></entry><entry><title type="html">Elderly Populations and Digital Voting Accessibility</title><link href="https://www.nicholaslbrown.com/accessability-and-affordability/" rel="alternate" type="text/html" title="Elderly Populations and Digital Voting Accessibility" /><published>2019-10-04T11:43:00-04:00</published><updated>2019-10-04T11:43:00-04:00</updated><id>https://www.nicholaslbrown.com/accessability-and-affordability</id><content type="html" xml:base="https://www.nicholaslbrown.com/accessability-and-affordability/">&lt;p&gt;&lt;a href=&quot;/assets/reports/Access_and_Affordability.pdf&quot;&gt;Download Report&lt;/a&gt;&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="ethics" /><category term="DNA" /><category term="information technology" /><category term="databases" /><category term="23andme" /><category term="ancestry.com" /><summary type="html">Download Report</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/vote.png" /></entry><entry><title type="html">Extending Data with APIs</title><link href="https://www.nicholaslbrown.com/extending-data-with-apis/" rel="alternate" type="text/html" title="Extending Data with APIs" /><published>2019-09-21T03:55:00-04:00</published><updated>2019-09-21T03:55:00-04:00</updated><id>https://www.nicholaslbrown.com/extending-data-with-apis</id><content type="html" xml:base="https://www.nicholaslbrown.com/extending-data-with-apis/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
-&lt;p&gt;In this post I will cover how to extend an existing dataset using publicly available APIs. We may want to do this for a number of reasons, namely engineering new features for a machine learning model, or minimizing the amount of data we collect/store.&lt;/p&gt;
+&lt;p&gt;As I worked through this analysis my expectations and understanding shifted drastically. Initially I sought to produce an analysis that could tell the the optimal days and situations to fish however I soon realized that this type of analysis would not be very useful from an applied standpoint. This is because I realized most people (including myself) do not have the luxury of simply choosing the best days to fish from a list. We have jobs and family commitments which limit our fishing days to a specific window where we go regardless of specific temp/pressure (weather permitting). Realizing this I decided to move forward with a much more user centric approach whereby I sought to understand how to optomize and analyze the trips I take and the data I consume. My largest question has been answered as this analysis has helped me to understand how various metrics common on fishing reports can be interpretted.&lt;b&gt;This analysis was most exciting to me because it demonstrates how someone with a little bit of data and analytical skills can gain insight and wisdom into patterns and trends previously only apparent to the most seasoned fisherman.&lt;/b&gt; If I want to have success I now know what locations (lat,lon) to go to when the wind is blowing North, the temperature is not too warm, and the atmospheric pressure is high.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="boxplot" /><category term="dotplot" /><category term="histogram" /><category term="basemap" /><category term="matplotlib" /><category term="numpy" /><category term="python" /><category term="pandas" /><summary type="html">I. Overview</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/bass.png" /></entry><entry><title type="html">Forecasting Market Reaction Using Twitter</title><link href="https://www.nicholaslbrown.com/forecasting-market-reaction/" rel="alternate" type="text/html" title="Forecasting Market Reaction Using Twitter" /><published>2020-09-27T21:10:00-04:00</published><updated>2020-09-27T21:10:00-04:00</updated><id>https://www.nicholaslbrown.com/forecasting-market-reaction</id><content type="html" xml:base="https://www.nicholaslbrown.com/forecasting-market-reaction/">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
 
-&lt;h3 id=&quot;i-design-of-data&quot;&gt;I. Design of Data&lt;/h3&gt;
+&lt;p&gt;Using Twitter and text mining sentiment classification methods I sought to find a relationship between tweets about a company and its market performance. Multinomial Naive Bayes proved to be effective at sentiment classification however the full capability of the model was limited by the quality of the training data. For the final analysis simple linear regression was conducted on the daily sentiment score and two market indicators, daily return and closing stock price. No trends were readily apparent in the data I sampled however I believe more research could yield interesting and strong results.&lt;/p&gt;
 
-&lt;p&gt;For this exercise I created two sample datasets. One dataset contains fishing locations which are popular in my area. The second dataset simulates a personal catch log containing what type of fish was caught and where we caught it. Because most people dont like to mess around with more technology while they are fishing I wanted to try and keep the table dimensions low and leave the rest of the information for the program to collect (things like weather, tide, etc). Below I have created an example table showing what both datasets will look like.&lt;/p&gt;
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;personal-catch-table&quot;&gt;Personal Catch Table&lt;/h5&gt;
+&lt;h2 id=&quot;data-preparation-and-collection&quot;&gt;Data Preparation and Collection&lt;/h2&gt;
 
-&lt;p&gt;This is what the data that the user will be inputting will look like. Again I don’t want the program to rely on too much info, the four things should be all you need to keep track of because the software should handle figuring out the weather data, etc.&lt;/p&gt;
+&lt;p&gt;There were three main sets of data which were collected to conduct the analysis: bulk tweets annotated for sentiment, tweets about a particular public company, and financial data about that same public company.&lt;/p&gt;
+
+&lt;h4 id=&quot;model-training-data&quot;&gt;Model Training Data&lt;/h4&gt;
+
+&lt;p&gt;Used to train the sentiment prediction model, annotated twitter data was highly difficult to acquire due to the terms of service associated with the twitter API. A dataset of 1.4 million tweets was provided by sentiment140, a project which specializes in analyzing sentiment for brands and products. Because of the implications further on in the analysis it was important to understand the process the creators of the dataset used to annotate the tweets. Rather than human annotation the set was created by detecting the presence of happy or sad emoticons, this caused the dataset to be absent of neutral values with only a 4 (representing positive) or a 0 (representing negative).&lt;/p&gt;
+
+&lt;h4 id=&quot;twitter-financial-data&quot;&gt;Twitter Financial Data&lt;/h4&gt;
+
+&lt;p&gt;Used to conduct the end analysis this data was requested through the twitter premium API. Because of the restrictions imposed on academic access to the API I was limited to collecting the past 30 days of tweets. The methodology for collecting the tweets is as follows: 100 tweets were collected for each day in a 30-day window. Tweets were requested by searching the desired stock ticker, the ‘or’ keyword, and the full company name spelled out. Limitations in this collection method were apparent from the start with twitter search returning several unrelated results depending on the company.&lt;/p&gt;
+
+&lt;h4 id=&quot;quantitative-financial-data&quot;&gt;Quantitative Financial Data&lt;/h4&gt;
+
+&lt;p&gt;Daily financial data was also gathered and reduced to the same 30-day window of the tweets. Using the yahoo finance API financial data included closing price and daily return of the stock was gathered for conducting the final analysis.&lt;/p&gt;
+
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;data-cleaning&quot;&gt;Data Cleaning&lt;/h2&gt;
+
+&lt;p&gt;Because of the limited search features of the twitter API and the nature of tweets themselves, data had to be extensively processed and transformed. After acquiring the tweets from the API, they were processed in two steps.&lt;/p&gt;
+
+&lt;h4 id=&quot;regex-cleanse&quot;&gt;Regex Cleanse.&lt;/h4&gt;
+&lt;p&gt;A simple regex pattern was used to parse the individual tweets removing any non-English letter leaving only the tweets words with no punctuation or emoticons. The exact regex pattern is below:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;‘[^a-zA-Z ]’&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;topic-cleanse&quot;&gt;Topic Cleanse.&lt;/h4&gt;
+&lt;p&gt;After disappointing initial results, I analyzed the tweets given to me by the API, I noticed that twitter search was unreliable and made mistakes which I could not readily explain (returning entire tweets in foreign encoded languages). Because of this I decided to implement a simple lexicon approach whereby tweets were later searched again to ensure they matched at least one of the key words related to the company. Though this approach is still not smart enough to differentiate between homonyms, e.g. Tesla as a vehicle or inventor, it represents a massive improvement in data quality for the final analysis.&lt;/p&gt;
+
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;model-evaluation&quot;&gt;Model Evaluation&lt;/h2&gt;
+&lt;p&gt;At the center of this project was the Naïve Bayes sentiment classification model, tuned to achieve maximum accuracy and speed. Though I originally chose to work with both linear support vector machines and Naïve Bayes the former had to be abandoned primarily because of low performance in preliminary hold-out tests. Additionally, support vector machine required higher processing and time requirements involved in creating the model. Vectorization and tokenization settings were modified to find the most accurate model. The process of vectorizing and evaluating the full model is detailed below:&lt;/p&gt;
+
+&lt;h4 id=&quot;vectorization-settings&quot;&gt;Vectorization Settings&lt;/h4&gt;
+&lt;p&gt;Several vectorization settings were experimented with to produce the most successful model. The final form of the model used the following vectorization settings:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;TFIDF weighting (to emphasize rarer words in the mass of hashtags and slang)&lt;/li&gt;
+  &lt;li&gt;Unigram (bi-gram and tri-gram yielded no noticeable improvement)&lt;/li&gt;
+  &lt;li&gt;Doc_freq = 5 (set minimum document frequency to 5, hopefully hides usernames and other proper nouns we don’t want)&lt;/li&gt;
+  &lt;li&gt;Stopwords = ‘English’ (a list of stop words provided by sklearn retrieved from the Glasgow Information Retrieval Group.2)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;trained-model-evaluation&quot;&gt;Trained Model Evaluation&lt;/h4&gt;
+&lt;p&gt;The completed model was evaluated in a three-step process. First, accuracy scores were predicted using hold-out test (1/3 split) and a 3-fold cross validation scheme. Second, log ratios were calculated for the models most negative and most positive features. Finally, real twitter data about companies was annotated by hand after being fed to the model for sentiment scoring, allowing me to gauge the performance of the model with production data.&lt;/p&gt;
+
+&lt;h4 id=&quot;predicted-accuracy&quot;&gt;Predicted Accuracy&lt;/h4&gt;
+&lt;p&gt;Hold-out tests were conducted using a 33% split of testing and 66% of training data leaving the training dataset with approximately 1 million observations evenly split with ~500,000 negative and ~500,000 positive. Given the binary classification task of assigning a 0 or 4 this model had a baseline accuracy of 50%. The most successful hold-out test predicted model accuracy at 77.29%. Additional cross-validation tests were conducted using the same data and model settings resulting in a 77.38% predicted accuracy. The confusion matrix below shows the prediction results of the holdout test and the precision and recall of the model. Interestingly both precision and recall were similar being differentiated by just 1% in all cases. This leads me to believe that the model is making mistakes recognizing both false positives and true positives.&lt;/p&gt;
+
+&lt;h5 id=&quot;precision-and-recall&quot;&gt;Precision and Recall&lt;/h5&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Species&lt;/th&gt;
-      &lt;th&gt;Latitude&lt;/th&gt;
-      &lt;th&gt;Longitude&lt;/th&gt;
-      &lt;th&gt;Datetime&lt;/th&gt;
+      &lt;th&gt;P-&amp;gt;&lt;/th&gt;
+      &lt;th&gt;Precision&lt;/th&gt;
+      &lt;th&gt;Recall&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Striped Bass&lt;/td&gt;
-      &lt;td&gt;41.038999&lt;/td&gt;
-      &lt;td&gt;-71.916319&lt;/td&gt;
-      &lt;td&gt;Fri, 6 Jun 2018 17:18:56 -0500&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0.78&lt;/td&gt;
+      &lt;td&gt;0.77&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Fluke&lt;/td&gt;
-      &lt;td&gt;41.012193&lt;/td&gt;
-      &lt;td&gt;-72.063143&lt;/td&gt;
-      &lt;td&gt;Sun, 21 Jul 2018 00:18:56 -0500&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;0.77&lt;/td&gt;
+      &lt;td&gt;0.78&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h5 id=&quot;fishing-locations-table&quot;&gt;Fishing Locations Table&lt;/h5&gt;
-
-&lt;p&gt;This is what the second dataset will look like, it is a table containing popular fishing locations. The Target column specifies exactly which type of fish can be found there.&lt;/p&gt;
+&lt;h4 id=&quot;feature-analysis&quot;&gt;Feature Analysis&lt;/h4&gt;
+&lt;p&gt;Feature Analysis. Log ratios were calculated for the features to determine what the model considered to be the most positive and most negative features. Additionally, the features which ended up in the middle were the most ‘neutral’ features. When calculated most of the top features made sense, e.g. the most negative features included words like “sad” or “miss” and the most positive features included “lol” or “thanks”. Tokens identified as very low in either positive or negative sentiment mostly included names and other proper nouns. The table below shows the calculated log ratios and top features of the model.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;Location&lt;/th&gt;
-      &lt;th&gt;Latitude&lt;/th&gt;
-      &lt;th&gt;Longitude&lt;/th&gt;
-      &lt;th&gt;Target&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Most Negative Features&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Most Positive Features&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;Montauk Point (The Elbow)&lt;/td&gt;
-      &lt;td&gt;41.070783&lt;/td&gt;
-      &lt;td&gt;-71.854206&lt;/td&gt;
-      &lt;td&gt;Striped Bass, Black Seabass, Bluefish&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.47&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;sad&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.58&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;time&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Blackfish Rock&lt;/td&gt;
-      &lt;td&gt;41.079974&lt;/td&gt;
-      &lt;td&gt;-71.882730&lt;/td&gt;
-      &lt;td&gt;Striped Bass, Blackfish&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.42&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;like&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.51&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;going&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Ditch Plains&lt;/td&gt;
-      &lt;td&gt;41.038796&lt;/td&gt;
-      &lt;td&gt;-71.916757&lt;/td&gt;
-      &lt;td&gt;Striped Bass&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.42&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;want&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.49&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;like&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Fort Tyler (The Ruins)&lt;/td&gt;
-      &lt;td&gt;41.141555&lt;/td&gt;
-      &lt;td&gt;-72.145713&lt;/td&gt;
-      &lt;td&gt;Striped Bass, Fluke, Bluefish&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.38&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;today&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.48&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;lol&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Plum Gut&lt;/td&gt;
-      &lt;td&gt;41.165869&lt;/td&gt;
-      &lt;td&gt;-72.215735&lt;/td&gt;
-      &lt;td&gt;Striped Bass&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.35&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;day&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.20&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;day&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Navy Beach Fishing Pier&lt;/td&gt;
-      &lt;td&gt;41.044804&lt;/td&gt;
-      &lt;td&gt;-71.977920&lt;/td&gt;
-      &lt;td&gt;Striped Bass, Black Seabass, Bluefish&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.29&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;miss&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.13&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;thanks&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Georgica Beach (1st Jetty)&lt;/td&gt;
-      &lt;td&gt;40.933467&lt;/td&gt;
-      &lt;td&gt;-72.216431&lt;/td&gt;
-      &lt;td&gt;Striped Bass&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.16&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;don’t&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.11&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;love&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Georgica Beach (White House)&lt;/td&gt;
-      &lt;td&gt;40.939470&lt;/td&gt;
-      &lt;td&gt;-72.201378&lt;/td&gt;
-      &lt;td&gt;Striped Bass&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.10&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;just&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.09&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;just&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;Green Lawns&lt;/td&gt;
-      &lt;td&gt;41.066667&lt;/td&gt;
-      &lt;td&gt;-72.383333&lt;/td&gt;
-      &lt;td&gt;Fluke&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-5.02&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;work&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-4.97&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;im&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-4.64&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;im&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;-4.85&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;good&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h3 id=&quot;ii-create-some-sample-data&quot;&gt;II. Create Some Sample Data&lt;/h3&gt;
-&lt;p&gt;Later on we will have much more data and use a database to store it. But beacuse I want to focus on the best ways to use python and not enter data for this assignment, I just want to do a proof-of-concept, so I will start by populating some pandas dataframes with sample data like the ones above. I thought about coding in the data into a pandas dataframe manually however I figured that since I spent time formatting the data above in markdown I may aswell use excel to convert these tables to small sample_*.csv files.&lt;/p&gt;
+&lt;h4 id=&quot;real-data-performance&quot;&gt;Real Data Performance&lt;/h4&gt;
+&lt;p&gt;Following the model creation and evaluation it was necessary to see how it actually performed using the financial tweets I gathered.I chose two files at random from the sample of 30 days and analyzed them for anomalies and incorrect predictions. Both sheets scored about 75% correct and ~79% correct for classifying sentiment however it was during this hand analysis in which two issues were uncovered.&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Tweets were getting through to the dataset which had little to do with the company (e.g. Tesla had tweets about the inventor rather than the car company)&lt;/li&gt;
+  &lt;li&gt;Certain tweets which were undoubtedly positive or negative (e.g mentioning Nazism or saying “I love x”) were being marked incorrectly.&lt;/li&gt;
+&lt;/ol&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Get a list of data_files in the data folder&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;p&gt;I attribute these errors to poor quality training data. Because of the way the data was annotated it is possible that people were tweeting things most people would consider negative with positive emojis and sentiment. To fix this sentiment tweets for training should be curated from people who do not possess a dubious moral background. Additionally, the tweets should be annotated by hand as I believe this would increase the ‘common sense’ of the model.&lt;/p&gt;
 
-&lt;span class=&quot;c&quot;&gt;# .DS_Store is a hidden file found in directories on the macOS &lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;#  -operating system&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'.DS_Store'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.DS_Store&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
 
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Import locations csv&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data/'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index_col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
-                          &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_bad_lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c&quot;&gt;# Import personal csv&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data/'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index_col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
-                         &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_bad_lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;h2 id=&quot;final-analysis&quot;&gt;Final Analysis&lt;/h2&gt;
 
-&lt;span class=&quot;c&quot;&gt;# Make sure data is good&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-&lt;h2 id=&quot;extending-the-data-with-apis&quot;&gt;Extending the Data with APIs&lt;/h2&gt;
-&lt;p&gt;For this part I want to take advantage of our tax dollars and use the NOAA API, Weather.gov API, and others for retreiving extremely detailed and accurate weather and tide data. Because we have a date/time and location (Latitude and Longitude) we can easily get other derived from these few data points. This is great because we dont have to worry about maintaining an entire database with tides, weather, and other information which there are entire organizations dedicated to collecting.&lt;/p&gt;
-
-&lt;h3 id=&quot;i-weathergov-api&quot;&gt;I. Weather.gov API&lt;/h3&gt;
-&lt;p&gt;For this part I will be working with the NOAA and Weather.gov API, there are two primary steps which are to first convert the data in the dataframe to a format accepted by the API, that way we can completley automate the process of looking up the extra information once the fisherman uploads their information. The second step is to actually query the API and append the returned data to a dataframe with proper formatting. I want to stick with using the fishing locations table instead of the personal catches because personal catches will require a bit more work to make it functional mostly because it involves looking up historical information where finding an API can be difficult.&lt;/p&gt;
-
-&lt;h4 id=&quot;use-api-to-add-todays-temp-to-dataframe&quot;&gt;Use API to add Todays Temp to Dataframe&lt;/h4&gt;
-&lt;p&gt;As a first exercise to practice using the new library ‘requests’ as well as parsing the json output I simply want to request the current temperature from weather.gov at each of the locations.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tempr_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# for loop to loop through dataframe&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Define api request parameters in payload&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Latitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Longitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#print(&quot;Payload: &quot;,payload)&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Define URL which in our case is very simple&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.weather.gov/points/{0}/forecast&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#print(&quot;url: &quot;,url)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;
-        &lt;span class=&quot;c&quot;&gt;#print(&quot;Lat: &quot;,str(row['Latitude'])[:9],&quot;Lon: &quot;,str(row['Longitude'])[:10], &quot;Error Collecting Data For&quot;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'temperature'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Append temperature rsults to temp list&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;tempr_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-&lt;span class=&quot;c&quot;&gt;# Append list as column to dataframe&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Temperature (F)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempr_list&lt;/span&gt;          
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;new-dataframe-with-temperatures&quot;&gt;New Dataframe with Temperatures&lt;/h4&gt;
-&lt;p&gt;Very cool! Based on the dataframe below it looks like the API failed to return data for some locations. I will have to look into this further because I feel that there may be an issue with how the coordinates are being sent to the API as I doubt it really doesnt have data on those areas. For now I will push forward with the proof of concept and either choose a different API for the final project or hopefully fix the issue. For now we have added a column titled “Today’s Temperature (F)” for Temperature in fahrenheit.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;use-api-to-add-other-important-data-to-dataframe&quot;&gt;Use API to add Other Important Data to Dataframe&lt;/h4&gt;
-&lt;p&gt;Temperature is great but there are so many other datapoints a very experienced fisherman knows to look at before choosing to fish somewhere. Let’s try to use some more API calls to either NOAA or Weather.gov to get some of those data points. I also wrote in a function this time so we can see which locations are returning empty data from the API.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;windspd_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;winddirec_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fcast_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-
-&lt;span class=&quot;c&quot;&gt;# for loop to loop through dataframe&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Payload&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Latitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Longitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Format url with desired payload (parameters)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.weather.gov/points/{0}/forecast&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;c&quot;&gt;# Use requests library to get url&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Load results as json data&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Process results&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result_wspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result_wdirec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result_forcast&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Lat: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Latitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Lon: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Longitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ERROR COLLECTING DATA&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result_wspeed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'windSpeed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result_wdirec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'windDirection'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;result_forcast&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'shortForecast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;# Append temperature rsults to temp list&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;windspd_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result_wspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;winddirec_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result_wdirec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;fcast_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result_forcast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-&lt;span class=&quot;c&quot;&gt;# Append list as column to dataframe&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Windspeed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;windspd_list&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Wind Direction'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;winddirec_list&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Summary Forecast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fcast_list&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;new-dataframe-with-more-data&quot;&gt;New Dataframe with More Data&lt;/h4&gt;
-&lt;p&gt;Now the dataset is starting to come together! This particular table could be really useful as it is. We could make a great dashboard of what the current fishing grounds are like before we head out in our boat/car. This is a huge improvement over tuning to a channel on your VHF radio and listening to the report! Additionally, we have some information now what we could use to make some predictive models if we so desired. Again we will have to fix the missing data problems however I think they can be corrected with a few hours of debugging.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;ii-noaa-api&quot;&gt;II. NOAA API&lt;/h3&gt;
-&lt;p&gt;Now we will work with the NOAA API. Compared to the Weather.gov API the NOAA API provides oceanic data and data which is more relevant to fishing like water temp, barometric pressure, etc. All these indicators tend to drive the behavior of fish and are very critical for success. The only caveat with this part of the assignment is that NOAA only has a handful of CO-OPS beacons which collect data, additionally data from these beacons must be queried using the beacon id instead of latitude and longitude.&lt;/p&gt;
-
-&lt;h4 id=&quot;use-api-to-add-water-temp-to-dataframe&quot;&gt;Use API to add Water Temp to Dataframe&lt;/h4&gt;
-&lt;p&gt;As a first exercise to practice using the NOAA API and library ‘requests’ as well as parsing the json output I simply want to request the current water temperature at each of the locations and times of catches. I will eventually need to think of a solution for mapping these to lat/lon or the software will be un-usable outside the eastern long island area. I suspect the largest challenge for this part will be formatting the dates.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# station ID which is nearest to the fishing grounds&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;station_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'8510560'&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# Water Temp List&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;water_temps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# URL for API&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'http://tidesandcurrents.noaa.gov/api/datagetter?'&lt;/span&gt;
-
-&lt;span class=&quot;c&quot;&gt;# for loop to loop through dataframe&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
-    
-    &lt;span class=&quot;c&quot;&gt;# need to convert string to datetime_object ex. (Fri, 6 Jun 2018 17:18:56 -0500)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;datetime_object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strptime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Datetime'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;a, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;b &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Y &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;H:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;M:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;S &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;z'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
-    &lt;span class=&quot;n&quot;&gt;date_to_send&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime_object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;#print(date_to_send)&lt;/span&gt;
-    
-    &lt;span class=&quot;c&quot;&gt;# Assemble payload&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'station'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;station_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'end_date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_to_send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-               &lt;span class=&quot;s&quot;&gt;'range'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'24'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'product'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'water_temperature'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'format'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-                &lt;span class=&quot;s&quot;&gt;'units'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'english'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'time_zone'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'lst'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-    
-    &lt;span class=&quot;n&quot;&gt;water_temps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'v'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Water Temp. (F)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;water_temps&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;new-personal-catches-dataframe-with-some-new-data&quot;&gt;New Personal Catches Dataframe with Some New Data&lt;/h4&gt;
-&lt;p&gt;Now our personal catch dataset is starting to come together! This is a great example of using historical data to lookup the water conditions. We looked up temperature in fahrenheit but there are many other parameters including tide that we could find. I will definitley be using this API in my final project and try to get some more data from it.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
-&lt;p&gt;Now we have a great foundation for getting a ton of data based off just one or two columns! This alone is great because I no longer have to lookup all this information manually. Additionally there is virtually no loss in quality because most websites that provide things like tides, weather, etc. almost always use NOAA data anyway. For my final project I hope to use some of these methods I developed to build out a nice intel dashboard with tons of data available to me for use before and after my fishing trips.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="APIs" /><category term="feature engineering" /><category term="python" /><category term="xml" /><category term="json" /><category term="pandas" /><category term="requests" /><category term="datetime parsing" /><category term="NOAA API" /><category term="Weather.gov API" /><summary type="html">Overview In this post I will cover how to extend an existing dataset using publicly available APIs. We may want to do this for a number of reasons, namely engineering new features for a machine learning model, or minimizing the amount of data we collect/store.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/apis.png" /></entry><entry><title type="html">Insights from Wardriving Data</title><link href="https://www.nicholaslbrown.com/insights-from-wardriving-data/" rel="alternate" type="text/html" title="Insights from Wardriving Data" /><published>2019-03-28T10:38:00-04:00</published><updated>2019-03-28T10:38:00-04:00</updated><id>https://www.nicholaslbrown.com/insights-from-wardriving-data</id><content type="html" xml:base="https://www.nicholaslbrown.com/insights-from-wardriving-data/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;With a working model and the necessary data collected and transformed, the final process for testing my hypothesis was to choose some companies to analyze. I chose three companies: Tesla, Microsoft, and Barrick Gold. First, I used a python program to acquire and feed the model the 100-tweet dataset for each day in a 30-day window of the stock period. Because the model could only predict positive or negative the mean was calculated for each day leaving me with a table containing the date and the mean sentiment score (between 0 and 4) for that date (based on the 100 tweets of the day). While mean was chosen to represent the days sentiment further analysis concluded that analyzing the ratio of positive to negative tweets could also show the overall sentiment of the company or product. Finally, this data was merged with the financial data based on the dates of both files, and regression was conducted to test for a relationship between either closing price and sentiment or daily return and sentiment. To see more of the final analysis you can &lt;a href=&quot;https://github.com/nbrown9/SentimentMarketPrediction/raw/master/presentations/FinalPresentation.pdf&quot;&gt;download my final presentation&lt;/a&gt; or look at the project repo on &lt;a href=&quot;https://github.com/nbrown9/SentimentMarketPrediction&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="text mining" /><category term="multinomial naive bayes" /><category term="sentiment classification" /><category term="linear regression" /><category term="sklearn" /><category term="python" /><summary type="html">Foreword</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/twitter-coupons.jpg" /></entry><entry><title type="html">Insights from Wardriving Data</title><link href="https://www.nicholaslbrown.com/insights-from-wardriving-data/" rel="alternate" type="text/html" title="Insights from Wardriving Data" /><published>2020-03-28T10:38:00-04:00</published><updated>2020-03-28T10:38:00-04:00</updated><id>https://www.nicholaslbrown.com/insights-from-wardriving-data</id><content type="html" xml:base="https://www.nicholaslbrown.com/insights-from-wardriving-data/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;The dataset I chose for this post is one I personally collected during wireless surveys conducted around the Syracuse University campus. Otherwise known as wardriving, using the aircrack-ng suite of software I collected data about the various local wlan environments including BSSID, SSID, security type, devices connected, and signal strength at multiple locations surrounding campus. Like much hacker software, the tools used for the survey were open source with varying driver support, as a consequence of the spotty support strange results and other issues are prevalent in the data. For this project I hope to first import and clean the data which should be a difficult task given the various nulls and inconsistent format. With a clean dataframe I would like to conduct some simply analysis.&lt;/p&gt;
 
@@ -1821,7 +1730,7 @@ dtype: int64
 
 &lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
 
-&lt;p&gt;This dataset shows how interesting insight can be derived from data that looks confusing and unstructured at first. The tremendous power of Pandas dataframes and python are evident, I’m sure some excel gurus could have done this without programming at all, but the benefits of programming are endless. Now we have a base for a small script which could do more analysis on the fly during future wardrives, automating a large part of our inital analytical process. Despite my apprehensions about working with this data I am very pleased with how everything turned out.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="csv parsing" /><category term="wardriving" /><category term="wifi" /><category term="network scanning" /><category term="python" /><category term="pandas" /><category term="aircrack-ng" /><category term="kali linux" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/dish.png" /></entry><entry><title type="html">Parsing Text Files with Regular Expression</title><link href="https://www.nicholaslbrown.com/parsing-text-with-regex/" rel="alternate" type="text/html" title="Parsing Text Files with Regular Expression" /><published>2019-02-28T18:47:00-05:00</published><updated>2019-02-28T18:47:00-05:00</updated><id>https://www.nicholaslbrown.com/parsing-text-with-regex</id><content type="html" xml:base="https://www.nicholaslbrown.com/parsing-text-with-regex/">&lt;h2 id=&quot;overview&quot;&gt;Overview:&lt;/h2&gt;
+&lt;p&gt;This dataset shows how interesting insight can be derived from data that looks confusing and unstructured at first. The tremendous power of Pandas dataframes and python are evident, I’m sure some excel gurus could have done this without programming at all, but the benefits of programming are endless. Now we have a base for a small script which could do more analysis on the fly during future wardrives, automating a large part of our inital analytical process. Despite my apprehensions about working with this data I am very pleased with how everything turned out.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="csv parsing" /><category term="wardriving" /><category term="wifi" /><category term="network scanning" /><category term="python" /><category term="pandas" /><category term="aircrack-ng" /><category term="kali linux" /><summary type="html">Introduction</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/dish.png" /></entry><entry><title type="html">Parsing Text Files with Regular Expression</title><link href="https://www.nicholaslbrown.com/parsing-text-with-regex/" rel="alternate" type="text/html" title="Parsing Text Files with Regular Expression" /><published>2019-12-28T18:47:00-05:00</published><updated>2019-12-28T18:47:00-05:00</updated><id>https://www.nicholaslbrown.com/parsing-text-with-regex</id><content type="html" xml:base="https://www.nicholaslbrown.com/parsing-text-with-regex/">&lt;h2 id=&quot;overview&quot;&gt;Overview:&lt;/h2&gt;
 &lt;p&gt;This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data used in this excercise was a folder of text files containing National Science Foundation grant award information.&lt;/p&gt;
 
 &lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
@@ -2217,173 +2126,264 @@ Number of sentences:  9
 &lt;ul style=&quot;list-style:none;&quot;&gt;
     &lt;li&gt;[1] https://www.nsf.gov/about/ &lt;/li&gt;
 &lt;/ul&gt;
-&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="regular expression" /><category term="text parsing" /><category term="natural language processing" /><category term="python" /><category term="pandas" /><summary type="html">Overview: This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data used in this excercise was a folder of text files containing National Science Foundation grant award information.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/regex.png" /></entry><entry><title type="html">Forecasting Market Reaction Using Twitter</title><link href="https://www.nicholaslbrown.com/forecasting-market-reaction/" rel="alternate" type="text/html" title="Forecasting Market Reaction Using Twitter" /><published>2019-02-27T21:10:00-05:00</published><updated>2019-02-27T21:10:00-05:00</updated><id>https://www.nicholaslbrown.com/forecasting-market-reaction</id><content type="html" xml:base="https://www.nicholaslbrown.com/forecasting-market-reaction/">&lt;h2 id=&quot;foreword&quot;&gt;Foreword&lt;/h2&gt;
+&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="regular expression" /><category term="text parsing" /><category term="natural language processing" /><category term="python" /><category term="pandas" /><summary type="html">Overview: This post is a small example of how one might process unstructured text files using regular expressions. In addition to regular expressions we will also use pandas to easily organize and store the data our expressions return. The data used in this excercise was a folder of text files containing National Science Foundation grant award information.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/regex.png" /></entry><entry><title type="html">Extending Data with APIs</title><link href="https://www.nicholaslbrown.com/extending-data-with-apis/" rel="alternate" type="text/html" title="Extending Data with APIs" /><published>2019-07-21T03:55:00-04:00</published><updated>2019-07-21T03:55:00-04:00</updated><id>https://www.nicholaslbrown.com/extending-data-with-apis</id><content type="html" xml:base="https://www.nicholaslbrown.com/extending-data-with-apis/">&lt;h2 id=&quot;overview&quot;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;In this post I will cover how to extend an existing dataset using publicly available APIs. We may want to do this for a number of reasons, namely engineering new features for a machine learning model, or minimizing the amount of data we collect/store.&lt;/p&gt;
 
-&lt;p&gt;Using Twitter and text mining sentiment classification methods I sought to find a relationship between tweets about a company and its market performance. Multinomial Naive Bayes proved to be effective at sentiment classification however the full capability of the model was limited by the quality of the training data. For the final analysis simple linear regression was conducted on the daily sentiment score and two market indicators, daily return and closing stock price. No trends were readily apparent in the data I sampled however I believe more research could yield interesting and strong results.&lt;/p&gt;
+&lt;h3 id=&quot;i-design-of-data&quot;&gt;I. Design of Data&lt;/h3&gt;
 
-&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+&lt;p&gt;For this exercise I created two sample datasets. One dataset contains fishing locations which are popular in my area. The second dataset simulates a personal catch log containing what type of fish was caught and where we caught it. Because most people dont like to mess around with more technology while they are fishing I wanted to try and keep the table dimensions low and leave the rest of the information for the program to collect (things like weather, tide, etc). Below I have created an example table showing what both datasets will look like.&lt;/p&gt;
 
-&lt;h2 id=&quot;data-preparation-and-collection&quot;&gt;Data Preparation and Collection&lt;/h2&gt;
+&lt;h5 id=&quot;personal-catch-table&quot;&gt;Personal Catch Table&lt;/h5&gt;
 
-&lt;p&gt;There were three main sets of data which were collected to conduct the analysis: bulk tweets annotated for sentiment, tweets about a particular public company, and financial data about that same public company.&lt;/p&gt;
-
-&lt;h4 id=&quot;model-training-data&quot;&gt;Model Training Data&lt;/h4&gt;
-
-&lt;p&gt;Used to train the sentiment prediction model, annotated twitter data was highly difficult to acquire due to the terms of service associated with the twitter API. A dataset of 1.4 million tweets was provided by sentiment140, a project which specializes in analyzing sentiment for brands and products. Because of the implications further on in the analysis it was important to understand the process the creators of the dataset used to annotate the tweets. Rather than human annotation the set was created by detecting the presence of happy or sad emoticons, this caused the dataset to be absent of neutral values with only a 4 (representing positive) or a 0 (representing negative).&lt;/p&gt;
-
-&lt;h4 id=&quot;twitter-financial-data&quot;&gt;Twitter Financial Data&lt;/h4&gt;
-
-&lt;p&gt;Used to conduct the end analysis this data was requested through the twitter premium API. Because of the restrictions imposed on academic access to the API I was limited to collecting the past 30 days of tweets. The methodology for collecting the tweets is as follows: 100 tweets were collected for each day in a 30-day window. Tweets were requested by searching the desired stock ticker, the ‘or’ keyword, and the full company name spelled out. Limitations in this collection method were apparent from the start with twitter search returning several unrelated results depending on the company.&lt;/p&gt;
-
-&lt;h4 id=&quot;quantitative-financial-data&quot;&gt;Quantitative Financial Data&lt;/h4&gt;
-
-&lt;p&gt;Daily financial data was also gathered and reduced to the same 30-day window of the tweets. Using the yahoo finance API financial data included closing price and daily return of the stock was gathered for conducting the final analysis.&lt;/p&gt;
-
-&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;data-cleaning&quot;&gt;Data Cleaning&lt;/h2&gt;
-
-&lt;p&gt;Because of the limited search features of the twitter API and the nature of tweets themselves, data had to be extensively processed and transformed. After acquiring the tweets from the API, they were processed in two steps.&lt;/p&gt;
-
-&lt;h4 id=&quot;regex-cleanse&quot;&gt;Regex Cleanse.&lt;/h4&gt;
-&lt;p&gt;A simple regex pattern was used to parse the individual tweets removing any non-English letter leaving only the tweets words with no punctuation or emoticons. The exact regex pattern is below:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-raw&quot; data-lang=&quot;raw&quot;&gt;‘[^a-zA-Z ]’&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h4 id=&quot;topic-cleanse&quot;&gt;Topic Cleanse.&lt;/h4&gt;
-&lt;p&gt;After disappointing initial results, I analyzed the tweets given to me by the API, I noticed that twitter search was unreliable and made mistakes which I could not readily explain (returning entire tweets in foreign encoded languages). Because of this I decided to implement a simple lexicon approach whereby tweets were later searched again to ensure they matched at least one of the key words related to the company. Though this approach is still not smart enough to differentiate between homonyms, e.g. Tesla as a vehicle or inventor, it represents a massive improvement in data quality for the final analysis.&lt;/p&gt;
-
-&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;model-evaluation&quot;&gt;Model Evaluation&lt;/h2&gt;
-&lt;p&gt;At the center of this project was the Naïve Bayes sentiment classification model, tuned to achieve maximum accuracy and speed. Though I originally chose to work with both linear support vector machines and Naïve Bayes the former had to be abandoned primarily because of low performance in preliminary hold-out tests. Additionally, support vector machine required higher processing and time requirements involved in creating the model. Vectorization and tokenization settings were modified to find the most accurate model. The process of vectorizing and evaluating the full model is detailed below:&lt;/p&gt;
-
-&lt;h4 id=&quot;vectorization-settings&quot;&gt;Vectorization Settings&lt;/h4&gt;
-&lt;p&gt;Several vectorization settings were experimented with to produce the most successful model. The final form of the model used the following vectorization settings:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;TFIDF weighting (to emphasize rarer words in the mass of hashtags and slang)&lt;/li&gt;
-  &lt;li&gt;Unigram (bi-gram and tri-gram yielded no noticeable improvement)&lt;/li&gt;
-  &lt;li&gt;Doc_freq = 5 (set minimum document frequency to 5, hopefully hides usernames and other proper nouns we don’t want)&lt;/li&gt;
-  &lt;li&gt;Stopwords = ‘English’ (a list of stop words provided by sklearn retrieved from the Glasgow Information Retrieval Group.2)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&quot;trained-model-evaluation&quot;&gt;Trained Model Evaluation&lt;/h4&gt;
-&lt;p&gt;The completed model was evaluated in a three-step process. First, accuracy scores were predicted using hold-out test (1/3 split) and a 3-fold cross validation scheme. Second, log ratios were calculated for the models most negative and most positive features. Finally, real twitter data about companies was annotated by hand after being fed to the model for sentiment scoring, allowing me to gauge the performance of the model with production data.&lt;/p&gt;
-
-&lt;h4 id=&quot;predicted-accuracy&quot;&gt;Predicted Accuracy&lt;/h4&gt;
-&lt;p&gt;Hold-out tests were conducted using a 33% split of testing and 66% of training data leaving the training dataset with approximately 1 million observations evenly split with ~500,000 negative and ~500,000 positive. Given the binary classification task of assigning a 0 or 4 this model had a baseline accuracy of 50%. The most successful hold-out test predicted model accuracy at 77.29%. Additional cross-validation tests were conducted using the same data and model settings resulting in a 77.38% predicted accuracy. The confusion matrix below shows the prediction results of the holdout test and the precision and recall of the model. Interestingly both precision and recall were similar being differentiated by just 1% in all cases. This leads me to believe that the model is making mistakes recognizing both false positives and true positives.&lt;/p&gt;
-
-&lt;h5 id=&quot;precision-and-recall&quot;&gt;Precision and Recall&lt;/h5&gt;
+&lt;p&gt;This is what the data that the user will be inputting will look like. Again I don’t want the program to rely on too much info, the four things should be all you need to keep track of because the software should handle figuring out the weather data, etc.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th&gt;P-&amp;gt;&lt;/th&gt;
-      &lt;th&gt;Precision&lt;/th&gt;
-      &lt;th&gt;Recall&lt;/th&gt;
+      &lt;th&gt;Species&lt;/th&gt;
+      &lt;th&gt;Latitude&lt;/th&gt;
+      &lt;th&gt;Longitude&lt;/th&gt;
+      &lt;th&gt;Datetime&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;0&lt;/td&gt;
-      &lt;td&gt;0.78&lt;/td&gt;
-      &lt;td&gt;0.77&lt;/td&gt;
+      &lt;td&gt;Striped Bass&lt;/td&gt;
+      &lt;td&gt;41.038999&lt;/td&gt;
+      &lt;td&gt;-71.916319&lt;/td&gt;
+      &lt;td&gt;Fri, 6 Jun 2018 17:18:56 -0500&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;0.77&lt;/td&gt;
-      &lt;td&gt;0.78&lt;/td&gt;
+      &lt;td&gt;Fluke&lt;/td&gt;
+      &lt;td&gt;41.012193&lt;/td&gt;
+      &lt;td&gt;-72.063143&lt;/td&gt;
+      &lt;td&gt;Sun, 21 Jul 2018 00:18:56 -0500&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&quot;feature-analysis&quot;&gt;Feature Analysis&lt;/h4&gt;
-&lt;p&gt;Feature Analysis. Log ratios were calculated for the features to determine what the model considered to be the most positive and most negative features. Additionally, the features which ended up in the middle were the most ‘neutral’ features. When calculated most of the top features made sense, e.g. the most negative features included words like “sad” or “miss” and the most positive features included “lol” or “thanks”. Tokens identified as very low in either positive or negative sentiment mostly included names and other proper nouns. The table below shows the calculated log ratios and top features of the model.&lt;/p&gt;
+&lt;h5 id=&quot;fishing-locations-table&quot;&gt;Fishing Locations Table&lt;/h5&gt;
+
+&lt;p&gt;This is what the second dataset will look like, it is a table containing popular fishing locations. The Target column specifies exactly which type of fish can be found there.&lt;/p&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Most Negative Features&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt;Most Positive Features&lt;/th&gt;
-      &lt;th style=&quot;text-align: center&quot;&gt; &lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+      &lt;th&gt;Latitude&lt;/th&gt;
+      &lt;th&gt;Longitude&lt;/th&gt;
+      &lt;th&gt;Target&lt;/th&gt;
     &lt;/tr&gt;
   &lt;/thead&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.47&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;sad&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.58&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;time&lt;/td&gt;
+      &lt;td&gt;Montauk Point (The Elbow)&lt;/td&gt;
+      &lt;td&gt;41.070783&lt;/td&gt;
+      &lt;td&gt;-71.854206&lt;/td&gt;
+      &lt;td&gt;Striped Bass, Black Seabass, Bluefish&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.42&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;like&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.51&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;going&lt;/td&gt;
+      &lt;td&gt;Blackfish Rock&lt;/td&gt;
+      &lt;td&gt;41.079974&lt;/td&gt;
+      &lt;td&gt;-71.882730&lt;/td&gt;
+      &lt;td&gt;Striped Bass, Blackfish&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.42&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;want&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.49&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;like&lt;/td&gt;
+      &lt;td&gt;Ditch Plains&lt;/td&gt;
+      &lt;td&gt;41.038796&lt;/td&gt;
+      &lt;td&gt;-71.916757&lt;/td&gt;
+      &lt;td&gt;Striped Bass&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.38&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;today&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.48&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;lol&lt;/td&gt;
+      &lt;td&gt;Fort Tyler (The Ruins)&lt;/td&gt;
+      &lt;td&gt;41.141555&lt;/td&gt;
+      &lt;td&gt;-72.145713&lt;/td&gt;
+      &lt;td&gt;Striped Bass, Fluke, Bluefish&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.35&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;day&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.20&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;day&lt;/td&gt;
+      &lt;td&gt;Plum Gut&lt;/td&gt;
+      &lt;td&gt;41.165869&lt;/td&gt;
+      &lt;td&gt;-72.215735&lt;/td&gt;
+      &lt;td&gt;Striped Bass&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.29&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;miss&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.13&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;thanks&lt;/td&gt;
+      &lt;td&gt;Navy Beach Fishing Pier&lt;/td&gt;
+      &lt;td&gt;41.044804&lt;/td&gt;
+      &lt;td&gt;-71.977920&lt;/td&gt;
+      &lt;td&gt;Striped Bass, Black Seabass, Bluefish&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.16&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;don’t&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.11&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;love&lt;/td&gt;
+      &lt;td&gt;Georgica Beach (1st Jetty)&lt;/td&gt;
+      &lt;td&gt;40.933467&lt;/td&gt;
+      &lt;td&gt;-72.216431&lt;/td&gt;
+      &lt;td&gt;Striped Bass&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.10&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;just&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.09&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;just&lt;/td&gt;
+      &lt;td&gt;Georgica Beach (White House)&lt;/td&gt;
+      &lt;td&gt;40.939470&lt;/td&gt;
+      &lt;td&gt;-72.201378&lt;/td&gt;
+      &lt;td&gt;Striped Bass&lt;/td&gt;
     &lt;/tr&gt;
     &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-5.02&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;work&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-4.97&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;im&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-4.64&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;im&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;-4.85&lt;/td&gt;
-      &lt;td style=&quot;text-align: center&quot;&gt;good&lt;/td&gt;
+      &lt;td&gt;Green Lawns&lt;/td&gt;
+      &lt;td&gt;41.066667&lt;/td&gt;
+      &lt;td&gt;-72.383333&lt;/td&gt;
+      &lt;td&gt;Fluke&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;h4 id=&quot;real-data-performance&quot;&gt;Real Data Performance&lt;/h4&gt;
-&lt;p&gt;Following the model creation and evaluation it was necessary to see how it actually performed using the financial tweets I gathered.I chose two files at random from the sample of 30 days and analyzed them for anomalies and incorrect predictions. Both sheets scored about 75% correct and ~79% correct for classifying sentiment however it was during this hand analysis in which two issues were uncovered.&lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Tweets were getting through to the dataset which had little to do with the company (e.g. Tesla had tweets about the inventor rather than the car company)&lt;/li&gt;
-  &lt;li&gt;Certain tweets which were undoubtedly positive or negative (e.g mentioning Nazism or saying “I love x”) were being marked incorrectly.&lt;/li&gt;
-&lt;/ol&gt;
+&lt;h3 id=&quot;ii-create-some-sample-data&quot;&gt;II. Create Some Sample Data&lt;/h3&gt;
+&lt;p&gt;Later on we will have much more data and use a database to store it. But beacuse I want to focus on the best ways to use python and not enter data for this assignment, I just want to do a proof-of-concept, so I will start by populating some pandas dataframes with sample data like the ones above. I thought about coding in the data into a pandas dataframe manually however I figured that since I spent time formatting the data above in markdown I may aswell use excel to convert these tables to small sample_*.csv files.&lt;/p&gt;
 
-&lt;p&gt;I attribute these errors to poor quality training data. Because of the way the data was annotated it is possible that people were tweeting things most people would consider negative with positive emojis and sentiment. To fix this sentiment tweets for training should be curated from people who do not possess a dubious moral background. Additionally, the tweets should be annotated by hand as I believe this would increase the ‘common sense’ of the model.&lt;/p&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Get a list of data_files in the data folder&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;listdir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;data/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;div class=&quot;breaker&quot;&gt;&lt;/div&gt;
+&lt;span class=&quot;c&quot;&gt;# .DS_Store is a hidden file found in directories on the macOS &lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;#  -operating system&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'.DS_Store'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.DS_Store&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;final-analysis&quot;&gt;Final Analysis&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Import locations csv&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data/'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index_col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+                          &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_bad_lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# Import personal csv&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_csv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data/'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dir_list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index_col&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;
+                         &lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;error_bad_lines&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;False&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;p&gt;With a working model and the necessary data collected and transformed, the final process for testing my hypothesis was to choose some companies to analyze. I chose three companies: Tesla, Microsoft, and Barrick Gold. First, I used a python program to acquire and feed the model the 100-tweet dataset for each day in a 30-day window of the stock period. Because the model could only predict positive or negative the mean was calculated for each day leaving me with a table containing the date and the mean sentiment score (between 0 and 4) for that date (based on the 100 tweets of the day). While mean was chosen to represent the days sentiment further analysis concluded that analyzing the ratio of positive to negative tweets could also show the overall sentiment of the company or product. Finally, this data was merged with the financial data based on the dates of both files, and regression was conducted to test for a relationship between either closing price and sentiment or daily return and sentiment. To see more of the final analysis you can &lt;a href=&quot;https://github.com/nbrown9/SentimentMarketPrediction/raw/master/presentations/FinalPresentation.pdf&quot;&gt;download my final presentation&lt;/a&gt; or look at the project repo on &lt;a href=&quot;https://github.com/nbrown9/SentimentMarketPrediction&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="text mining" /><category term="multinomial naive bayes" /><category term="sentiment classification" /><category term="linear regression" /><category term="sklearn" /><category term="python" /><summary type="html">Foreword</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/twitter-coupons.jpg" /></entry></feed>
+&lt;span class=&quot;c&quot;&gt;# Make sure data is good&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;h2 id=&quot;extending-the-data-with-apis&quot;&gt;Extending the Data with APIs&lt;/h2&gt;
+&lt;p&gt;For this part I want to take advantage of our tax dollars and use the NOAA API, Weather.gov API, and others for retreiving extremely detailed and accurate weather and tide data. Because we have a date/time and location (Latitude and Longitude) we can easily get other derived from these few data points. This is great because we dont have to worry about maintaining an entire database with tides, weather, and other information which there are entire organizations dedicated to collecting.&lt;/p&gt;
+
+&lt;h3 id=&quot;i-weathergov-api&quot;&gt;I. Weather.gov API&lt;/h3&gt;
+&lt;p&gt;For this part I will be working with the NOAA and Weather.gov API, there are two primary steps which are to first convert the data in the dataframe to a format accepted by the API, that way we can completley automate the process of looking up the extra information once the fisherman uploads their information. The second step is to actually query the API and append the returned data to a dataframe with proper formatting. I want to stick with using the fishing locations table instead of the personal catches because personal catches will require a bit more work to make it functional mostly because it involves looking up historical information where finding an API can be difficult.&lt;/p&gt;
+
+&lt;h4 id=&quot;use-api-to-add-todays-temp-to-dataframe&quot;&gt;Use API to add Todays Temp to Dataframe&lt;/h4&gt;
+&lt;p&gt;As a first exercise to practice using the new library ‘requests’ as well as parsing the json output I simply want to request the current temperature from weather.gov at each of the locations.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;tempr_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# for loop to loop through dataframe&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Define api request parameters in payload&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Latitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Longitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#print(&quot;Payload: &quot;,payload)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Define URL which in our case is very simple&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.weather.gov/points/{0}/forecast&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#print(&quot;url: &quot;,url)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;
+        &lt;span class=&quot;c&quot;&gt;#print(&quot;Lat: &quot;,str(row['Latitude'])[:9],&quot;Lon: &quot;,str(row['Longitude'])[:10], &quot;Error Collecting Data For&quot;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'temperature'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Append temperature rsults to temp list&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;tempr_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+&lt;span class=&quot;c&quot;&gt;# Append list as column to dataframe&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Temperature (F)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tempr_list&lt;/span&gt;          
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;new-dataframe-with-temperatures&quot;&gt;New Dataframe with Temperatures&lt;/h4&gt;
+&lt;p&gt;Very cool! Based on the dataframe below it looks like the API failed to return data for some locations. I will have to look into this further because I feel that there may be an issue with how the coordinates are being sent to the API as I doubt it really doesnt have data on those areas. For now I will push forward with the proof of concept and either choose a different API for the final project or hopefully fix the issue. For now we have added a column titled “Today’s Temperature (F)” for Temperature in fahrenheit.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;use-api-to-add-other-important-data-to-dataframe&quot;&gt;Use API to add Other Important Data to Dataframe&lt;/h4&gt;
+&lt;p&gt;Temperature is great but there are so many other datapoints a very experienced fisherman knows to look at before choosing to fish somewhere. Let’s try to use some more API calls to either NOAA or Weather.gov to get some of those data points. I also wrote in a function this time so we can see which locations are returning empty data from the API.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;windspd_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;winddirec_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fcast_list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+
+&lt;span class=&quot;c&quot;&gt;# for loop to loop through dataframe&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Payload&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Latitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;','&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Longitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Format url with desired payload (parameters)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://api.weather.gov/points/{0}/forecast&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;c&quot;&gt;# Use requests library to get url&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Load results as json data&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Process results&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result_wspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result_wdirec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result_forcast&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;API Missing Data&quot;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Lat: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Latitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Lon: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;str&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Longitude'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])[:&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ERROR COLLECTING DATA&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result_wspeed&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'windSpeed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result_wdirec&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'windDirection'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+        &lt;span class=&quot;n&quot;&gt;result_forcast&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'properties'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'periods'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'shortForecast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# Append temperature rsults to temp list&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;windspd_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result_wspeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;winddirec_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result_wdirec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fcast_list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result_forcast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+&lt;span class=&quot;c&quot;&gt;# Append list as column to dataframe&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Windspeed'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;windspd_list&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Wind Direction'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;winddirec_list&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Todays Summary Forecast'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fcast_list&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;new-dataframe-with-more-data&quot;&gt;New Dataframe with More Data&lt;/h4&gt;
+&lt;p&gt;Now the dataset is starting to come together! This particular table could be really useful as it is. We could make a great dashboard of what the current fishing grounds are like before we head out in our boat/car. This is a huge improvement over tuning to a channel on your VHF radio and listening to the report! Additionally, we have some information now what we could use to make some predictive models if we so desired. Again we will have to fix the missing data problems however I think they can be corrected with a few hours of debugging.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;locationsDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;ii-noaa-api&quot;&gt;II. NOAA API&lt;/h3&gt;
+&lt;p&gt;Now we will work with the NOAA API. Compared to the Weather.gov API the NOAA API provides oceanic data and data which is more relevant to fishing like water temp, barometric pressure, etc. All these indicators tend to drive the behavior of fish and are very critical for success. The only caveat with this part of the assignment is that NOAA only has a handful of CO-OPS beacons which collect data, additionally data from these beacons must be queried using the beacon id instead of latitude and longitude.&lt;/p&gt;
+
+&lt;h4 id=&quot;use-api-to-add-water-temp-to-dataframe&quot;&gt;Use API to add Water Temp to Dataframe&lt;/h4&gt;
+&lt;p&gt;As a first exercise to practice using the NOAA API and library ‘requests’ as well as parsing the json output I simply want to request the current water temperature at each of the locations and times of catches. I will eventually need to think of a solution for mapping these to lat/lon or the software will be un-usable outside the eastern long island area. I suspect the largest challenge for this part will be formatting the dates.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# station ID which is nearest to the fishing grounds&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;station_id&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'8510560'&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# Water Temp List&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;water_temps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# URL for API&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'http://tidesandcurrents.noaa.gov/api/datagetter?'&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# for loop to loop through dataframe&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;iterrows&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;():&lt;/span&gt;
+    
+    &lt;span class=&quot;c&quot;&gt;# need to convert string to datetime_object ex. (Fri, 6 Jun 2018 17:18:56 -0500)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;datetime_object&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strptime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Datetime'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;a, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;b &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Y &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;H:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;M:&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;S &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;z'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; 
+    &lt;span class=&quot;n&quot;&gt;date_to_send&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datetime_object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;strftime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;Y&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;%&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;d'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;#print(date_to_send)&lt;/span&gt;
+    
+    &lt;span class=&quot;c&quot;&gt;# Assemble payload&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'station'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;station_id&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'end_date'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date_to_send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+               &lt;span class=&quot;s&quot;&gt;'range'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'24'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'product'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'water_temperature'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'format'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+                &lt;span class=&quot;s&quot;&gt;'units'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'english'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'time_zone'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'lst'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;requests&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;payload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;json&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;loads&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;n&quot;&gt;water_temps&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;json_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'data'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'v'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'Water Temp. (F)'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;water_temps&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;new-personal-catches-dataframe-with-some-new-data&quot;&gt;New Personal Catches Dataframe with Some New Data&lt;/h4&gt;
+&lt;p&gt;Now our personal catch dataset is starting to come together! This is a great example of using historical data to lookup the water conditions. We looked up temperature in fahrenheit but there are many other parameters including tide that we could find. I will definitley be using this API in my final project and try to get some more data from it.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;personalDF&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;head&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Now we have a great foundation for getting a ton of data based off just one or two columns! This alone is great because I no longer have to lookup all this information manually. Additionally there is virtually no loss in quality because most websites that provide things like tides, weather, etc. almost always use NOAA data anyway. For my final project I hope to use some of these methods I developed to build out a nice intel dashboard with tons of data available to me for use before and after my fishing trips.&lt;/p&gt;</content><author><name>nicholasbrown</name></author><category term="blog" /><category term="APIs" /><category term="feature engineering" /><category term="python" /><category term="xml" /><category term="json" /><category term="pandas" /><category term="requests" /><category term="datetime parsing" /><category term="NOAA API" /><category term="Weather.gov API" /><summary type="html">Overview In this post I will cover how to extend an existing dataset using publicly available APIs. We may want to do this for a number of reasons, namely engineering new features for a machine learning model, or minimizing the amount of data we collect/store.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://www.nicholaslbrown.com/assets/images/blog/apis.png" /></entry></feed>
